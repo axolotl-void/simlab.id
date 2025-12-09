@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>SimLab.id - Laboratorium Sains Digital untuk Sekolah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS global + navbar (pakai versi dark yang sebelumnya) -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+</head>
+<body class="simlab-body">
+
+  <!-- NAVBAR -->
+    <!-- NAVBAR -->
+     <body class="simlab-body">
+  <header class="slb-navbar">
+    
+    <div class="slb-nav-inner">
+      <a href="index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">
+          SimLab<span>.id</span>
+        </div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="#simulasi-populer">Simulasi</a>
+        <a href="about.html">Tentang</a>
+        <a href="#guru">Untuk Guru</a>
+        <a href="sains-quran.html">Sains dalam Al-Qur’an</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <!-- tombol tema -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Ganti tema terang/gelap"
+        >
+          🌙
+        </button>
+
+        <span class="slb-nav-badge">Beta</span>
+        <a href="auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+  <main class="page-fade">
+
+
+  <!-- HERO (background gambar, bukan img kotak) -->
+  <main>
+    <section class="hero hero-bg">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <p class="hero-kicker">Laboratorium Sains Digital Versi Lokal</p>
+          <h1>
+            Belajar Sains Berbasis Islam<br />
+            <span>yang mudah di pahami </span>
+          </h1>
+          <p class="hero-subtitle">
+            SimLab.id membantu guru menjelaskan konsep abstrak dengan
+            simulasi interaktif yang ringan, mudah dipakai, dan bisa diakses
+            langsung dari browser.
+          </p>
+
+          <div class="hero-cta">
+            <a href="simulasi/tata-surya/index.html" class="slb-btn slb-btn-primary">
+              🚀 Mulai Simulasi Tata Surya
+            </a>
+            <a href="#simulasi-populer" class="slb-btn slb-btn-ghost">
+              Lihat daftar simulasi
+            </a>
+          </div>
+
+          <div class="hero-tags">
+            <span class="slb-pill">SMP</span>
+            <span class="slb-pill">SMA</span>
+            <span class="slb-pill">IPA • Fisika • Kebumian</span>
+          </div>
+
+          <p class="hero-caption">
+            Visual Tata Surya versi SimLab.id — simulasi interaktifnya bisa kamu coba di bawah. 😉
+          </p>
+        </div>
+
+        <!-- kolom kanan dibiarkan kosong (cuma buat spacing kalau di desktop) -->
+        <div class="hero-right"></div>
+      </div>
+    </section>
+
+    <!-- SIMULASI POPULER -->
+    <section id="simulasi-populer" class="simulasi-populer">
+      <h2>Simulasi Populer</h2>
+      <p class="subtext">
+        Beberapa simulasi yang dirancang untuk membantu guru dan siswa memahami konsep IPA dengan cara visual.
+      </p>
+
+      <div class="simulasi-grid">
+
+        <!-- CARD 1 - Tata Surya -->
+        <article class="sim-card">
+          <div class="sim-card-thumb">
+            <img
+              src="assets/img/sim-tata-surya-card.png"
+              alt="Ilustrasi simulasi Tata Surya Interaktif SimLab.id"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="sim-card-body">
+            <h3>Tata Surya Interaktif</h3>
+            <p>
+              Amati orbit delapan planet mengelilingi Matahari, lengkap dengan
+              informasi jarak dan periode revolusi yang disederhanakan.
+            </p>
+            <a href="simulasi/tata-surya/index.html" class="sim-btn">
+              Buka Simulasi
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2 - Gerak Lurus (GLB & GLBB) -->
+        <article class="sim-card">
+          <div class="sim-card-thumb">
+            <img
+              src="assets/img/sim-glb-card.png"
+              alt="Ilustrasi simulasi Gerak Lurus GLB dan GLBB"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="sim-card-body">
+            <h3>Gerak Lurus (GLB &amp; GLBB)</h3>
+            <p>
+              Simulasi gerak lurus menggunakan objek di lintasan untuk membantu
+              memahami hubungan jarak, waktu, kecepatan, dan percepatan.
+            </p>
+ <a href="simulasi/glb/index.html" class="sim-btn">Buka Simulasi</a> 
+</div>
+        </article>
+
+        <!-- CARD 3 - Rangkaian Listrik Sederhana -->
+        <article class="sim-card">
+          <div class="sim-card-thumb">
+            <img
+              src="assets/img/sim-listrik-card.png"
+              alt="Ilustrasi simulasi Rangkaian Listrik Sederhana"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="sim-card-body">
+            <h3>Rangkaian Listrik Sederhana</h3>
+            <p>
+              Bangun rangkaian seri-paralel dasar dan lihat bagaimana perubahan
+              resistor memengaruhi arus dan tegangan pada lampu.
+            </p>
+           <a href="simulasi/listrik/index.html" class="sim-btn">Buka Simulasi</a>
+
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    
+
+        <!-- =========================
+         TEMA SIMULASI (ALA PHET)
+    ========================== -->
+    <section id="tema" class="section tema-section">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Pilih Tema Simulasi</h2>
+          <p>
+            Simulasi di SimLab.id dikelompokkan berdasarkan tema,
+            sehingga guru dan siswa bisa langsung memilih sesuai
+            mata pelajaran.
+          </p>
+        </header>
+
+        <div class="tema-grid">
+          <!-- FISIKA -->
+          <a href="simulasi/fisika/index.html" class="tema-card tema-fisika">
+            <img
+              src="assets/img/tema-fisika.png"
+              alt="Tema simulasi Fisika"
+              loading="lazy"
+            />
+            <span>FISIKA</span>
+          </a>
+
+          <!-- MATEMATIKA -->
+          <a href="simulasi/matematika/index.html" class="tema-card tema-matematika">
+            <img
+              src="assets/img/tema-matematika.png"
+              alt="Tema simulasi Matematika"
+              loading="lazy"
+            />
+            <span>MATEMATIKA</span>
+          </a>
+
+          <!-- KIMIA -->
+          <a href="simulasi/kimia/index.html" class="tema-card tema-kimia">
+            <img
+              src="assets/img/tema-kimia.png"
+              alt="Tema simulasi Kimia"
+              loading="lazy"
+            />
+            <span>KIMIA</span>
+          </a>
+
+          <!-- ILMU KEBUMIAN -->
+          <a href="simulasi/kebumian/index.html" class="tema-card tema-kebumian">
+            <img
+              src="assets/img/tema-kebumian.png"
+              alt="Tema simulasi Ilmu Kebumian"
+              loading="lazy"
+            />
+            <span>ILMU KEBUMIAN</span>
+          </a>
+
+          <!-- BIOLOGI -->
+          <a href="simulasi/biologi/index.html" class="tema-card tema-biologi">
+            <img
+              src="assets/img/tema-biologi.png"
+              alt="Tema simulasi Biologi"
+              loading="lazy"
+            />
+            <span>BIOLOGI</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SIMULASI POPULER (sudah ada)
+    ========================== -->
+    <section id="simulasi-populer" class="simulasi-populer">
+      <!-- dst... -->
+
+  <!-- =========================
+     HERO: UNTUK GURU & PENGAJAR
+========================== -->
+<section id="guru" class="guru-hero-full">
+  <div class="guru-hero-overlay reveal-on-scroll">
+    <h2>Untuk Guru &amp; Pengajar</h2>
+    <p>
+      SimLab.id dirancang supaya guru bisa langsung pakai di kelas tanpa
+      banyak persiapan teknis. Cukup buka browser, pilih simulasi,
+      dan arahkan diskusi bersama siswa.
+    </p>
+
+    <a href="#guru-detail" class="guru-btn">
+      Pelajari cara penggunaan di kelas
+    </a>
+  </div>
+</section>
+
+<!-- =========================
+     DETAIL: PANDUAN UNTUK GURU
+========================== -->
+<section id="guru-detail" class="section guru-detail">
+  <div class="section-inner">
+
+    <header class="section-header reveal-on-scroll">
+      <h2>Panduan penggunaan SimLab.id untuk guru</h2>
+      <p>
+        Bagian ini memberikan gambaran singkat bagaimana guru dapat
+        memanfaatkan simulasi SimLab.id di kelas sebagai pendukung
+        penjelasan materi dan diskusi.
+      </p>
+    </header>
+
+    <!-- Bagian utama panduan: SEKARANG 1 KOLOM KE BAWAH -->
+    <div class="guru-layout">
+
+      <!-- Kolom 1: Cara cepat menggunakan -->
+      <div class="guru-col reveal-on-scroll">
+        <h3>Cara cepat menggunakan SimLab.id di kelas</h3>
+        <ul class="guru-list">
+          <li>
+            <strong>1. Buka SimLab.id</strong><br />
+            Buka <em>SimLab.id</em> di laptop guru yang tersambung ke proyektor
+            atau TV di depan kelas.
+          </li>
+          <li>
+            <strong>2. Pilih simulasi sesuai materi</strong><br />
+            Misalnya saat membahas tata surya, guru membuka simulasi
+            <em>Tata Surya Interaktif</em> dari menu simulasi Ilmu Kebumian.
+          </li>
+          <li>
+            <strong>3. Ajak siswa mengamati &amp; bertanya</strong><br />
+            Sebelum menjalankan simulasi, minta siswa memperkirakan
+            apa yang akan terjadi. Setelah simulasi dijalankan,
+            diskusikan hasilnya bersama.
+          </li>
+          <li>
+            <strong>4. Beri tugas eksplorasi</strong><br />
+            Siswa bisa mencatat pengamatan di LKS atau Google Form,
+            misalnya: planet mana yang periodenya paling lama,
+            atau mana yang paling dekat ke Matahari.
+          </li>
+        </ul>
+
+        <div class="guru-note">
+          <strong>Catatan:</strong> Simulasi dibuat ringan sehingga tetap nyaman
+          dipakai di lab komputer sekolah dengan spesifikasi beragam.
+        </div>
+      </div>
+
+      <!-- Kolom 2: Skenario penggunaan (muncul setelahnya) -->
+      <div class="guru-col reveal-on-scroll" style="transition-delay: .12s;">
+        <h3>Skenario penggunaan di kelas</h3>
+
+        <div class="guru-scenarios">
+          <div class="guru-scenario-item">
+            <span class="guru-tag">Mode Proyektor</span>
+            <p>
+              Guru menjalankan satu simulasi di depan kelas, sementara
+              siswa fokus mengamati dan menjawab pertanyaan panduan dari guru.
+            </p>
+          </div>
+
+          <div class="guru-scenario-item">
+            <span class="guru-tag">Praktikum Virtual</span>
+            <p>
+              Jika lab atau alat terbatas, simulasi dapat menjadi pengganti
+              praktikum sederhana sehingga semua siswa tetap melihat
+              fenomena secara visual.
+            </p>
+          </div>
+
+          <div class="guru-scenario-item">
+            <span class="guru-tag">Tugas Mandiri</span>
+            <p>
+              Siswa bisa mengakses simulasi di rumah (jika ada gawai
+              dan internet) dan mengisi lembar kerja yang disiapkan guru.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /guru-layout -->
+
+    <!-- Kartu ringkas fitur guru di bagian bawah -->
+    <div class="guru-card-grid reveal-on-scroll" style="transition-delay: .2s;">
+      <div class="guru-card">
+        <h4>Ringan &amp; simpel</h4>
+        <p>
+          Antarmuka bersih, tombol terbatas, dan bahasa Indonesia
+          sehingga mudah dijelaskan dalam waktu singkat.
+        </p>
+      </div>
+      <div class="guru-card">
+        <h4>Mendukung diskusi kelas</h4>
+        <p>
+          Simulasi tidak sekadar animasi, tetapi bisa dihentikan, diulang,
+          dan diubah parameternya untuk memancing pertanyaan siswa.
+        </p>
+      </div>
+      <div class="guru-card">
+        <h4>Siap diintegrasikan dengan LKS</h4>
+        <p>
+          Setiap simulasi dapat dipasangkan dengan lembar kerja siswa (LKS)
+          atau tugas refleksi yang disusun guru.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- SECTION: FOOTER CTA -->
+    <section class="section section-dark-alt">
+      <div class="section-inner footer-cta">
+        <div>
+          <h2>Siap membawa simulasi lokal ke kelas Anda?</h2>
+          <p>
+            Versi awal SimLab.id dapat langsung digunakan tanpa instalasi.
+            Cukup buka browser, klik simulasi, dan mulai eksplorasi.
+          </p>
+        </div>
+        <div class="footer-cta-actions">
+          <a href="simulasi/tata-surya/index.html" class="slb-btn slb-btn-primary">
+            Mulai dari simulasi Tata Surya
+          </a>
+          <a href="about.html" class="slb-btn slb-btn-ghost">
+            Pelajari latar belakang proyek
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  </main>
+  </body>
+
+
+  <!-- FOOTER -->
+  <footer class="slb-footer">
+    <div class="slb-footer-inner">
+      <span>© 2025 SimLab.id • Dibuat oleh tim dosen &amp; mahasiswa Ilmu Komputer</span>
+      <span class="slb-footer-mini">
+        Fokus: sekolah menengah • Versi lomba nasional
+      </span>
+    </div>
+  </footer>
+  
+  <!-- JS kecil untuk navbar mobile -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

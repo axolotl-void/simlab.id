@@ -1,0 +1,230 @@
+/* ===== HALAMAN AUTH (LOGIN & REGISTER) ===== */
+
+.auth-main {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 26px 18px 34px;
+}
+
+.auth-inner {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card {
+  border-radius: 20px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top left, #020617, #020617 55%, #020617 100%);
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.95);
+  padding: 18px 18px 16px;
+}
+
+/* HEADER */
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.8);
+  color: #bfdbfe;
+}
+
+.auth-badge span {
+  font-size: 13px;
+}
+
+.auth-title {
+  margin: 8px 0 3px;
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+.auth-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* SOCIAL BUTTONS */
+
+.auth-social {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.auth-social-btn {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.16s ease;
+}
+
+.auth-social-btn span.icon {
+  font-size: 16px;
+}
+
+.auth-social-btn:hover {
+  border-color: #60a5fa;
+  color: #f9fafb;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+.auth-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(31, 41, 55, 1);
+}
+
+.auth-divider-text {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* FORM */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.auth-label {
+  font-size: 12px;
+  color: #e5e7eb;
+}
+
+.auth-label span.required {
+  color: #f97316;
+}
+
+.auth-input,
+.auth-select {
+  border-radius: 10px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: rgba(15, 23, 42, 0.8);
+  padding: 7px 9px;
+  font-size: 13px;
+  color: #e5e7eb;
+  outline: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.auth-input::placeholder {
+  color: #6b7280;
+}
+
+.auth-input:focus,
+.auth-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.4);
+}
+
+/* SMALL HELP TEXT */
+
+.auth-help {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* REMEMBER / FORGOT & ROLE */
+
+.auth-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.auth-remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.auth-remember input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+}
+
+.auth-link {
+  font-size: 11px;
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* SUBMIT */
+
+.auth-submit {
+  margin-top: 10px;
+}
+
+.auth-submit .slb-btn {
+  width: 100%;
+}
+
+/* FOOTER / SWITCH PAGE */
+
+.auth-switch {
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.auth-switch a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 640px) {
+  .auth-main {
+    padding-inline: 12px;
+  }
+}

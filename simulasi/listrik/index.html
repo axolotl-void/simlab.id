@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulasi Rangkaian Listrik Sederhana - SimLab.id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS global + navbar + khusus simulasi listrik -->
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../../assets/css/sim-listrik.css" />
+</head>
+<body class="simlab-body">
+
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="../../index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">SimLab<span>.id</span></div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="../../index.html">Beranda</a>
+        <a href="../../index.html#simulasi-populer" class="active">Simulasi</a>
+        <a href="../../about.html">Tentang</a>
+        <a href="../../index.html#guru">Untuk Guru</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <span class="slb-nav-badge">Beta</span>
+        <a href="../../auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="sim-main">
+    <!-- HEADER SIMULASI -->
+    <section class="sim-header">
+      <div>
+        <p class="sim-kicker">Simulasi Interaktif • Fisika (Listrik)</p>
+        <h1>Rangkaian Listrik Sederhana</h1>
+        <p class="sim-subtitle">
+          Pilih komponen dari panel atas (lampu, kabel, baterai, saklar, resistor),
+          lalu susun rangkaian di papan simulasi seperti di laboratorium.
+        </p>
+        <p class="sim-note">
+          Versi ini berfokus pada visual &amp; susunan rangkaian.
+          Logika arus &amp; kecerahan lampu dapat ditambahkan pada tahap berikutnya.
+        </p>
+      </div>
+    </section>
+
+    <!-- BOARD 1200 x 600 -->
+    <section class="board-section">
+      <div class="board-wrapper">
+        <!-- Toolbar / panel komponen -->
+        <div class="board-toolbar">
+          <button class="tool-btn" data-type="lamp">
+            <img src="../../assets/img/icont/lampu.png" alt="Lampu" />
+          </button>
+          <button class="tool-btn" data-type="wire">
+            <img src="../../assets/img/icont/kabel.png" alt="Kabel" />
+          </button>
+          <button class="tool-btn" data-type="battery">
+            <img src="../../assets/img/icont/batrai.png" alt="Baterai" />
+          </button>
+          <button class="tool-btn" data-type="switch">
+            <img src="../../assets/img/icont/saklar.png" alt="Saklar" />
+          </button>
+          <button class="tool-btn" data-type="resistor">
+            <img src="../../assets/img/icont/resistor.png" alt="Resistor" />
+          </button>
+        </div>
+
+        <!-- Area papan simulasi -->
+        <canvas
+          id="circuitBoard"
+          width="1200"
+          height="600"
+        >
+          Browser Anda tidak mendukung elemen canvas.
+        </canvas>
+      </div>
+
+      <p class="board-hint">
+        Klik salah satu ikon komponen di panel atas untuk menambahkannya ke papan.
+        Komponen di papan dapat digeser dengan drag &amp; drop.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="slb-footer">
+    <div class="slb-footer-inner">
+      <span>© 2025 SimLab.id • Dibuat oleh tim dosen &amp; mahasiswa Ilmu Komputer</span>
+      <span class="slb-footer-mini">
+        Fokus: sekolah menengah • Versi lomba nasional
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/sim-listrik.js" defer></script>
+</body>
+</html>

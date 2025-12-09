@@ -1,0 +1,186 @@
+/* layout halaman */
+.glb-page {
+  min-height: 100vh;
+  padding: 32px 24px 40px;
+}
+
+.glb-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.glb-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.glb-header p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* dua kolom utama */
+.glb-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* kartu lintasan */
+.glb-track-card,
+.glb-control-card {
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.65);
+  padding: 18px 18px 16px;
+}
+
+.glb-track {
+  position: relative;
+  height: 200px;
+  border-radius: 14px;
+  background: radial-gradient(circle at top, #020617, #020617 45%, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  overflow: hidden;
+  padding: 40px 24px 26px;
+}
+
+/* lintasan garis */
+.glb-track::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 50%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(148, 163, 184, 0.5),
+    rgba(226, 232, 240, 0.9)
+  );
+}
+
+/* objek yang bergerak */
+.glb-object {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #fef9c3, #f97316);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.7);
+}
+
+/* skala posisi */
+.glb-scale {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* info t, x, v */
+.glb-info {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* panel kontrol */
+.glb-control-card h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.glb-field {
+  margin-bottom: 12px;
+}
+
+.glb-field label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.glb-field input[type="range"],
+.glb-field select {
+  width: 100%;
+}
+
+.glb-field-value {
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  margin-top: 2px;
+}
+
+.glb-hint {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.glb-buttons {
+  display: flex;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.glb-buttons button {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.7);
+  color: #e5e7eb;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.glb-buttons button:hover {
+  background: rgba(56, 189, 248, 0.15);
+  transform: translateY(-1px);
+}
+
+.glb-note {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .glb-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .glb-page {
+    padding-inline: 16px;
+  }
+}

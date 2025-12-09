@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tentang SimLab.id - Laboratorium Sains Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+</head>
+<body class="simlab-body">
+  
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">
+          SimLab<span>.id</span>
+        </div>
+      </a>
+
+     <nav class="slb-nav-links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="#simulasi-populer">Simulasi</a>
+        <a href="about.html">Tentang</a>
+        <a href="#guru">Untuk Guru</a>
+        <a href="sains-quran.html">Sains dalam Al-Qur’an</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <!-- tombol tema -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Ganti tema terang/gelap"
+        >
+          🌙
+        </button>
+
+        <span class="slb-nav-badge">Beta</span>
+        <a href="auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+
+  <main>
+    <!-- HERO / INTRO -->
+    <section class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Tentang SimLab.id</h2>
+          <p>
+            SimLab.id adalah laboratorium sains digital berbasis web yang dikembangkan
+            untuk membantu guru dan siswa di Indonesia mempelajari IPA melalui simulasi
+            interaktif yang ringan dan mudah digunakan.
+          </p>
+        </header>
+
+        <div style="margin-top: 16px; max-width: 760px; font-size: 14px; color: #9ca3af;">
+          <p style="margin-top: 0;">
+            Proyek ini lahir dari kolaborasi dosen dan mahasiswa Ilmu Komputer yang melihat
+            kebutuhan akan media pembelajaran sains yang:
+          </p>
+          <ul style="padding-left: 18px; margin-top: 6px;">
+            <li>berbahasa Indonesia,</li>
+            <li>lebih ramah untuk kondisi perangkat dan jaringan sekolah,</li>
+            <li>dan mudah diintegrasikan ke kegiatan belajar mengajar harian.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATAR BELAKANG -->
+    <section class="section section-light">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Latar Belakang</h2>
+          <p>
+            Banyak guru sudah mengenal simulasi sains internasional seperti PhET. Namun,
+            tidak semua sekolah memiliki koneksi internet stabil, perangkat yang kuat, atau
+            kenyamanan menggunakan antarmuka berbahasa asing.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="slb-card">
+            <div class="slb-card-tag">Tantangan di Sekolah</div>
+            <h3>Keterbatasan alat &amp; laboratorium</h3>
+            <p>
+              Tidak semua sekolah memiliki laboratorium lengkap. Beberapa materi seperti
+              tata surya, gelombang, atau listrik sulit divisualisasikan tanpa alat bantu.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Kendala Teknis</div>
+            <h3>Perangkat &amp; jaringan bervariasi</h3>
+            <p>
+              Spesifikasi komputer di lab sekolah sering tidak merata. Koneksi internet
+              juga tidak selalu stabil, sehingga butuh simulasi yang lebih ringan.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Bahasa &amp; Konteks</div>
+            <h3>Kebutuhan konten lokal</h3>
+            <p>
+              Antarmuka berbahasa asing bisa menjadi hambatan. Guru dan siswa lebih nyaman
+              dengan istilah dan contoh yang sesuai kurikulum Indonesia.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUJUAN PENGEMBANGAN -->
+    <section class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Tujuan Pengembangan SimLab.id</h2>
+          <p>
+            SimLab.id tidak bermaksud menggantikan platform yang sudah ada, tetapi
+            menyediakan alternatif lokal yang lebih relevan dengan kondisi sekolah di Indonesia.
+          </p>
+        </header>
+
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number">1</div>
+            <h3>Mempermudah guru IPA</h3>
+            <p>
+              Menyediakan simulasi yang bisa langsung dipakai di kelas tanpa proses instalasi
+              rumit, sehingga guru dapat fokus pada penyampaian konsep.
+            </p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <h3>Mendorong pembelajaran berbasis eksplorasi</h3>
+            <p>
+              Membantu siswa belajar dengan cara mengamati, mencoba, dan menarik kesimpulan
+              sendiri dari fenomena yang ditampilkan.
+            </p>
+          </div>
+
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <h3>Menyediakan solusi ringan &amp; fleksibel</h3>
+            <p>
+              Dirancang agar tetap nyaman dijalankan di lab komputer sekolah yang spesifikasinya
+              beragam, dengan asumsi perangkat dan jaringan tidak selalu ideal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FITUR UTAMA -->
+    <section class="section section-light">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Rancangan Fitur Utama</h2>
+          <p>
+            Versi lomba ini berfokus pada satu simulasi utama: Tata Surya. Namun struktur
+            sistem sudah disiapkan untuk mendukung penambahan simulasi lain di masa depan.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="slb-card">
+            <div class="slb-card-tag">Simulasi</div>
+            <h3>Tata Surya Interaktif</h3>
+            <p>
+              Menampilkan orbit planet mengelilingi Matahari dengan visual sederhana,
+              dilengkapi informasi dasar setiap planet yang dapat diakses saat diklik.
+            </p>
+            <ul class="slb-card-list">
+              <li>Orbit planet yang dapat dipercepat/diperlambat</li>
+              <li>Highlight planet saat dipilih</li>
+              <li>Panel informasi ringkas (jarak relatif, periode orbit, kategori)</li>
+            </ul>
+          </article>
+
+          <article class="slb-card slb-card-muted">
+            <div class="slb-card-tag">Roadmap</div>
+            <h3>Simulasi Fisika Dasar</h3>
+            <p>
+              Setelah versi awal stabil, SimLab.id direncanakan akan menambah simulasi
+              untuk materi Gerak Lurus (GLB &amp; GLBB), gaya, dan energi.
+            </p>
+            <p class="slb-card-coming">
+              Rencana: pengembangan bertahap sesuai kebutuhan guru &amp; umpan balik pengguna.
+            </p>
+          </article>
+
+          <article class="slb-card slb-card-muted">
+            <div class="slb-card-tag">Integrasi Kelas</div>
+            <h3>Dukungan untuk LKS &amp; tugas</h3>
+            <p>
+              Setiap simulasi dirancang agar mudah dipasangkan dengan Lembar Kerja Siswa (LKS)
+              atau tugas berbasis pengamatan, sehingga guru tetap memegang peran utama.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERBANDINGAN / NILAI TAMBAH -->
+    <section class="section">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Nilai Tambah untuk Sekolah di Indonesia</h2>
+          <p>
+            SimLab.id tidak hanya menampilkan animasi, tetapi berusaha menjembatani gap antara
+            teori di buku dan praktik di lapangan.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="slb-card">
+            <div class="slb-card-tag">Bahasa</div>
+            <h3>Berbahasa Indonesia</h3>
+            <p>
+              Seluruh antarmuka, label, dan keterangan menggunakan Bahasa Indonesia yang
+              disesuaikan dengan istilah dalam kurikulum.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Desain</div>
+            <h3>Fokus pada kesederhanaan</h3>
+            <p>
+              Tombol dan kontrol dibuat sesedikit mungkin agar guru tidak bingung saat
+              menjelaskan di depan kelas, terutama pada jam pelajaran yang waktunya terbatas.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Teknis</div>
+            <h3>Diprioritaskan untuk perangkat sekolah</h3>
+            <p>
+              Tampilan visual dibuat cukup menarik, tetapi tetap ringan sehingga dapat berjalan
+              di banyak jenis komputer lab yang masih spesifikasi standar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIM PENGEMBANG -->
+    <section class="section section-dark-alt">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Tim Pengembang</h2>
+          <p>
+            Proyek ini dikembangkan sebagai kolaborasi lintas bidang antara dosen IPA dan
+            mahasiswa Ilmu Komputer, dengan fokus pada pengembangan media pembelajaran digital.
+          </p>
+        </header>
+
+        <div class="card-grid">
+          <article class="slb-card">
+            <div class="slb-card-tag">Dosen</div>
+            <h3>Dosen Pengampu IPA</h3>
+            <p>
+              Berperan dalam menentukan materi, kesesuaian dengan kurikulum, dan memastikan
+              simulasi yang dibuat tidak menimbulkan miskonsepsi sains.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Dosen / Pembina</div>
+            <h3>Dosen Ilmu Komputer</h3>
+            <p>
+              Membimbing desain arsitektur web, pemilihan teknologi, serta memastikan sistem
+              dapat dikembangkan lebih lanjut di luar lomba.
+            </p>
+          </article>
+
+          <article class="slb-card">
+            <div class="slb-card-tag">Mahasiswa</div>
+            <h3>Tim Mahasiswa Ilmu Komputer</h3>
+            <p>
+              Mengimplementasikan antarmuka, logika simulasi, serta melakukan uji coba awal
+              penggunaan di lingkungan sekolah atau lab kampus.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+ <footer class="slb-footer-pro">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col">
+      <div class="footer-logo">SL</div>
+      <h3 class="footer-title">SimLab.id</h3>
+      <p class="footer-desc">
+        Laboratorium Sains Digital untuk Sekolah Indonesia.  
+        Dibuat oleh dosen & mahasiswa Ilmu Komputer.
+      </p>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Navigasi</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="#simulasi-populer">Simulasi</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="#guru">Untuk Guru</a></li>
+      </ul>
+    </div>
+
+    <!-- Info -->
+    <div class="footer-col">
+      <h4 class="footer-subtitle">Informasi</h4>
+      <ul class="footer-links">
+        <li><a href="#">Dokumentasi</a></li>
+        <li><a href="#">Roadmap Proyek</a></li>
+        <li><a href="#">Hubungi Tim</a></li>
+        <li><a href="#">Syarat & Ketentuan</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 SimLab.id • Versi lomba nasional • Indonesia
+  </div>
+</footer>
+
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

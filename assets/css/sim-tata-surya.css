@@ -1,0 +1,328 @@
+/* ===== LAYOUT DASAR SIMULASI ===== */
+
+.sim-main {
+  min-height: 100vh;
+  padding: 96px 40px 40px;
+  background: radial-gradient(circle at top, #111827 0, #020617 55%, #020617 100%);
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.sim-header {
+  max-width: 920px;
+  margin: 0 auto 32px;
+}
+
+.sim-kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin-bottom: 0.4rem;
+}
+
+.sim-header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.5rem;
+}
+
+.sim-subtitle {
+  font-size: 0.98rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 0.3rem;
+}
+
+.sim-note {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ===== GRID LAYOUT ===== */
+
+.sim-layout {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: minmax(260px, 280px) minmax(0, 1.5fr) minmax(260px, 300px);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* ===== SIDEBAR KONTROL ===== */
+
+.sim-sidebar {
+  background: radial-gradient(circle at top left, #0f172a 0, #020617 80%);
+  border-radius: 18px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+}
+
+.sim-sidebar h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #f9fafb;
+}
+
+.sim-control-group {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(148, 163, 184, 0.4);
+}
+
+.sim-control-group h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+.sim-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.sim-help,
+.sim-mini {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.sim-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin-top: 8px;
+}
+
+.sim-checkbox input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+/* ===== RANGE & BUTTON ===== */
+
+.sim-sidebar input[type="range"],
+.sim-canvas-controls input[type="range"] {
+  width: 100%;
+  accent-color: #38bdf8;
+}
+
+.sim-sidebar button {
+  margin-top: 6px;
+}
+
+.sim-sidebar button + button {
+  margin-left: 4px;
+}
+
+/* ===== LEGENDA ===== */
+
+.sim-legend {
+  margin-top: 18px;
+}
+
+.legend {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  margin-right: 6px;
+  box-shadow: 0 0 10px rgba(15, 23, 42, 0.9);
+  vertical-align: middle;
+}
+
+.legend-sun {
+  background: radial-gradient(circle, #fde68a 0, #f59e0b 60%, #b45309 100%);
+}
+
+.legend-planet {
+  background: radial-gradient(circle, #93c5fd 0, #3b82f6 60%, #1d4ed8 100%);
+}
+
+.legend-moon {
+  background: radial-gradient(circle, #f9fafb 0, #e5e7eb 50%, #6b7280 100%);
+}
+
+.legend-asteroid {
+  background: radial-gradient(circle, #e5e7eb 0, #9ca3af 60%, #4b5563 100%);
+}
+
+/* ===== KANVAS ===== */
+
+.sim-canvas-wrap {
+  background: radial-gradient(circle at top, #020617 0, #020617 60%, #020617 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.9);
+  padding: 18px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+#solarCanvas {
+  width: 100%;
+  max-height: 640px;
+  border-radius: 18px;
+  background: transparent;
+  display: block;
+}
+
+.sim-canvas-controls {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* ===== PANEL INFO ===== */
+
+.sim-info-panel {
+  background: radial-gradient(circle at top right, #0b1120 0, #020617 80%);
+  border-radius: 18px;
+  padding: 16px 16px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+}
+
+.sim-info-panel h2 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #f9fafb;
+}
+
+.planet-info-box {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+  border-radius: 14px;
+  padding: 10px 12px 12px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  margin-bottom: 14px;
+}
+
+.planet-info-box h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #e5e7eb;
+}
+
+#infoDesc {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.planet-meta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  font-size: 0.83rem;
+  color: #d1d5db;
+}
+
+.planet-meta dt {
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.planet-meta dd {
+  margin: 0;
+}
+
+/* ===== TAFAKKUR ===== */
+
+.tafakkur-box {
+  margin-top: 10px;
+  background: radial-gradient(circle at top, #020617 0, #020617 100%);
+  border-radius: 14px;
+  padding: 10px 12px 12px;
+  border: 1px solid rgba(96, 165, 250, 0.5);
+}
+
+.tafakkur-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tafakkur-header h3 {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.tafakkur-tag {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.7);
+}
+
+.tafakkur-text {
+  font-size: 0.8rem;
+  color: #d1d5db;
+  margin-bottom: 4px;
+}
+
+.tafakkur-ayat {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  direction: rtl;
+  text-align: right;
+  margin: 6px 0 2px;
+}
+
+.tafakkur-ref {
+  font-size: 0.8rem;
+  color: #a5b4fc;
+}
+
+.tafakkur-footnote {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* ===== SECTION GURU ===== */
+
+.sim-teacher-note.section {
+  margin-top: 32px;
+}
+
+.sim-teacher-note .section-inner {
+  max-width: 880px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .sim-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sim-sidebar,
+  .sim-info-panel {
+    order: 1;
+  }
+
+  .sim-canvas-wrap {
+    order: 0;
+  }
+
+  .sim-main {
+    padding: 80px 20px 28px;
+  }
+}

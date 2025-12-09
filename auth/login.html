@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Masuk - SimLab.id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../assets/css/auth.css" />
+</head>
+<body class="simlab-body">
+
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="../index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">SimLab<span>.id</span></div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="../index.html">Beranda</a>
+        <a href="../simulasi/index.html">Simulasi</a>
+        <a href="../about.html">Tentang</a>
+        <a href="../index.html#guru">Untuk Guru</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <span class="slb-nav-badge">Beta</span>
+        <a href="login.html" class="slb-btn slb-btn-outline slb-btn-sm">Masuk</a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN AUTH -->
+  <main class="auth-main">
+    <div class="auth-inner">
+      <div class="auth-card">
+        <header class="auth-header">
+          <div class="auth-badge">
+            <span>🔐</span> <span>Area Pengguna</span>
+          </div>
+          <h1 class="auth-title">Masuk ke SimLab.id</h1>
+          <p class="auth-subtitle">
+            Gunakan akun yang sudah terdaftar, atau login cepat dengan akun Google/Facebook.
+          </p>
+        </header>
+
+        <!-- SOCIAL LOGIN (UI SAJA) -->
+        <div class="auth-social">
+          <button class="auth-social-btn" type="button">
+            <span class="icon">🟢</span>
+            <span>Masuk dengan Google</span>
+          </button>
+          <button class="auth-social-btn" type="button">
+            <span class="icon">🔵</span>
+            <span>Masuk dengan Facebook</span>
+          </button>
+        </div>
+
+        <div class="auth-divider">
+          <div class="auth-divider-line"></div>
+          <div class="auth-divider-text">atau masuk dengan email</div>
+          <div class="auth-divider-line"></div>
+        </div>
+
+        <!-- FORM LOGIN -->
+        <form class="auth-form">
+          <div class="auth-field">
+            <label class="auth-label" for="login-email">
+              Email <span class="required">*</span>
+            </label>
+            <input
+              id="login-email"
+              type="email"
+              class="auth-input"
+              placeholder="guru@smpcontoh.sch.id"
+              required
+            />
+          </div>
+
+          <div class="auth-field">
+            <label class="auth-label" for="login-password">
+              Kata sandi <span class="required">*</span>
+            </label>
+            <input
+              id="login-password"
+              type="password"
+              class="auth-input"
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <div class="auth-row">
+            <label class="auth-remember">
+              <input type="checkbox" />
+              <span>Ingat saya di komputer ini</span>
+            </label>
+            <a href="#" class="auth-link">Lupa kata sandi?</a>
+          </div>
+
+          <div class="auth-submit">
+            <button type="submit" class="slb-btn slb-btn-primary slb-btn-sm">
+              Masuk
+            </button>
+          </div>
+        </form>
+
+        <div class="auth-switch">
+          Belum punya akun?
+          <a href="register.html">Daftar akun baru</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER PRO -->
+  <footer class="slb-footer-pro">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">SL</div>
+        <h3 class="footer-title">SimLab.id</h3>
+        <p class="footer-desc">
+          Laboratorium Sains Digital untuk Sekolah Indonesia.
+          Dibuat oleh dosen &amp; mahasiswa Ilmu Komputer.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-subtitle">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="../simulasi/index.html">Simulasi</a></li>
+          <li><a href="../about.html">Tentang</a></li>
+          <li><a href="../index.html#guru">Untuk Guru</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-subtitle">Informasi</h4>
+        <ul class="footer-links">
+          <li><a href="#">Dokumentasi</a></li>
+          <li><a href="#">Roadmap Proyek</a></li>
+          <li><a href="#">Hubungi Tim</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SimLab.id • Versi lomba nasional • Indonesia
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

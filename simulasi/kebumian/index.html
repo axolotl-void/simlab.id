@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>SimLab.id - Simulasi Ilmu Kebumian</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/navbar.css" />
+</head>
+<body class="simlab-body" data-theme="dark">
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="../../index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">SimLab<span>.id</span></div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="../../index.html">Beranda</a>
+        <a href="../../index.html#tema" class="active">Simulasi</a>
+        <a href="../../about.html">Tentang</a>
+        <a href="../../index.html#guru">Untuk Guru</a>
+        <a href="../../sains-quran.html" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Ganti tema terang/gelap"
+        >
+          🌙
+        </button>
+
+        <span class="slb-nav-badge">Beta</span>
+        <a href="../../auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO TEMA KEBUMIAN -->
+    <section class="section kebumian-hero">
+      <div class="section-inner kebumian-hero-inner">
+        <div class="kebumian-hero-text">
+          <a href="../../index.html#tema" class="back-link">← Kembali ke Tema Simulasi</a>
+
+          <p class="hero-kicker">Tema Simulasi • Ilmu Kebumian</p>
+          <h1>
+            Simulasi Ilmu Kebumian
+            <br />
+            untuk mengenal bumi dan langit secara visual.
+          </h1>
+          <p class="hero-subtitle">
+            Di tema ini, SimLab.id menghadirkan simulasi seputar tata surya, gerak bumi,
+            gerhana, dan fenomena kebumian lainnya. Dirancang agar guru bisa menjelaskan
+            konsep IPA sekaligus mengaitkannya dengan ayat-ayat kauniyah.
+          </p>
+
+          <ul class="kebumian-points">
+            <li>Fokus pada Tata Surya dan fenomena langit–bumi.</li>
+            <li>Visual interaktif yang bisa dihentikan, diulang, dan dieksplorasi.</li>
+            <li>Cocok untuk kelas VII–IX SMP dan X–XI SMA.</li>
+          </ul>
+        </div>
+
+        <div class="kebumian-hero-visual">
+          <div class="kebumian-hero-card">
+            <img
+              src="../../assets/img/tema-kebumian.png"
+              alt="Ilustrasi tema simulasi Ilmu Kebumian"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIST SIMULASI DI TEMA KEBUMIAN -->
+    <section class="section kebumian-sim-list">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Pilih Simulasi Ilmu Kebumian</h2>
+          <p>
+            Berikut beberapa simulasi yang termasuk dalam tema Ilmu Kebumian.
+            Sebagian sudah dapat digunakan, dan sebagian lain masih dalam tahap pengembangan.
+          </p>
+        </header>
+
+        <div class="sub-sim-grid">
+          <!-- 1. TATA SURYA INTERAKTIF (SUDAH ADA) -->
+          <article class="sub-sim-card sub-sim-live">
+            <div class="sub-sim-tag">Tersedia</div>
+            <h3>Tata Surya Interaktif</h3>
+            <p>
+              Amati delapan planet yang mengelilingi Matahari. Siswa dapat melihat
+              hubungan antara jarak, periode revolusi, dan orbit planet secara visual.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Kontrol kecepatan waktu dan tampilan orbit.</li>
+              <li>Cocok untuk pengenalan tata surya di SMP dan SMA.</li>
+              <li>Dapat dikaitkan dengan ayat-ayat tentang penciptaan langit dan bumi.</li>
+            </ul>
+            <a
+              href="../tata-surya/index.html"
+              class="slb-btn slb-btn-primary sub-sim-btn"
+            >
+              🚀 Buka Simulasi
+            </a>
+          </article>
+
+          <!-- 2. ROTASI & REVOLUSI BUMI -->
+          <article class="sub-sim-card sub-sim-soon">
+            <div class="sub-sim-tag">Dalam pengembangan</div>
+            <h3>Rotasi &amp; Revolusi Bumi</h3>
+            <p>
+              Simulasi untuk memperlihatkan bagaimana rotasi dan revolusi Bumi
+              menghasilkan siang–malam dan perubahan musim.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Menjelaskan perbedaan zona waktu dan panjang bayangan.</li>
+              <li>Dapat dipakai untuk tugas pengamatan sederhana di sekitar sekolah.</li>
+            </ul>
+            <div class="sub-sim-coming">Segera hadir setelah versi lomba.</div>
+          </article>
+
+          <!-- 3. GERHANA MATAHARI & BULAN -->
+          <article class="sub-sim-card sub-sim-soon">
+            <div class="sub-sim-tag">Rencana</div>
+            <h3>Gerhana Matahari &amp; Bulan</h3>
+            <p>
+              Model sederhana posisi Matahari–Bumi–Bulan untuk menjelaskan
+              bagaimana terjadinya berbagai jenis gerhana.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Memvisualisasikan gerhana total, sebagian, dan penumbra.</li>
+              <li>Mudah dihubungkan dengan fenomena gerhana yang pernah diamati di Indonesia.</li>
+            </ul>
+            <div class="sub-sim-coming">Masih dalam tahap perancangan.</div>
+          </article>
+
+          <!-- 4. LAPISAN BUMI & VULKANISME -->
+          <article class="sub-sim-card sub-sim-soon">
+            <div class="sub-sim-tag">Rencana</div>
+            <h3>Lapisan Bumi &amp; Vulkanisme</h3>
+            <p>
+              Visualisasi lapisan kerak, mantel, dan inti Bumi, serta hubungan dengan
+              gunung api dan gempa bumi.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Dapat dipakai saat membahas bencana alam dan mitigasi.</li>
+              <li>Mendorong siswa memahami hikmah di balik fenomena alam.</li>
+            </ul>
+            <div class="sub-sim-coming">Dirancang untuk versi lanjutan SimLab.id.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="slb-footer">
+    <div class="slb-footer-inner">
+      <span>© 2025 SimLab.id • Tema Ilmu Kebumian</span>
+      <span class="slb-footer-mini">
+        Fokus: sekolah menengah • Versi lomba nasional
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS NAVBAR & TEMA -->
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

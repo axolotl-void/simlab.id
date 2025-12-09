@@ -1,0 +1,116 @@
+/* PANEL INFO PLANET */
+.planet-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 330px;
+  height: 100vh;
+  background: #0f172aee;
+  color: #f8fafc;
+  backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+}
+
+/* panel muncul */
+.planet-info.show {
+  transform: translateX(0);
+}
+
+/* panel disembunyikan */
+.hidden {
+  display: none;
+}
+
+.close-panel {
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  font-size: 18px;
+  float: right;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.info-section {
+  margin-top: 20px;
+}
+
+.info-section h4 {
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+/* gaya islamic halus */
+.quran-section {
+  border-left: 3px solid #22d3ee;
+  padding-left: 10px;
+  margin-top: 25px;
+}
+
+.quran-section small {
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
+}
+
+/* PANEL INFO PLANET */
+.planet-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 330px;
+  height: 100vh;
+  background: #0f172aee;
+  color: #f8fafc;
+  backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: 0.3s ease;
+}
+
+.planet-info.show {
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
+
+.close-panel {
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  font-size: 18px;
+  float: right;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.info-section {
+  margin-top: 20px;
+}
+
+.info-section h4 {
+  color: #38bdf8;
+  margin-bottom: 6px;
+}
+
+.quran-section {
+  border-left: 3px solid #22d3ee;
+  padding-left: 10px;
+  margin-top: 25px;
+}
+
+.quran-section small {
+  display: block;
+  margin-top: 4px;
+  opacity: 0.8;
+}

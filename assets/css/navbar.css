@@ -1,0 +1,141 @@
+.slb-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+  background: linear-gradient(
+    to right,
+    rgba(2, 6, 23, 0.96),
+    rgba(15, 23, 42, 0.96)
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.slb-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo */
+
+.slb-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.slb-logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 30% 30%, #facc15, #fb923c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #111827;
+  font-size: 16px;
+}
+
+.slb-logo-text {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  color: #f9fafb;
+}
+.slb-logo-text span {
+  color: #38bdf8;
+}
+
+/* Links */
+
+.slb-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 24px;
+  font-size: 13px;
+}
+
+.slb-nav-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  opacity: 0.8;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.slb-nav-links a:hover {
+  opacity: 1;
+}
+
+.slb-nav-links a.active {
+  opacity: 1;
+  border-bottom-color: #38bdf8;
+}
+
+/* Right */
+
+.slb-nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slb-nav-badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #e5e7eb;
+}
+
+/* Toggle (mobile) */
+
+.slb-nav-toggle {
+  margin-left: auto;
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  border-radius: 10px;
+  color: #e5e7eb;
+  padding: 4px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .slb-nav-links {
+    display: none;
+  }
+  .slb-nav-right {
+    display: none;
+  }
+  .slb-nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .slb-nav-links.nav-open,
+  .slb-nav-right.nav-open {
+    display: flex;
+  }
+  .slb-nav-links.nav-open {
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 48px;
+    padding: 10px 24px 12px;
+    background: rgba(15, 23, 42, 0.98);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  }
+}
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daftar Simulasi - SimLab.id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Style global + navbar -->
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/navbar.css" />
+  <!-- Style khusus halaman daftar simulasi -->
+  <link rel="stylesheet" href="../assets/css/sim-list.css" />
+</head>
+<body class="simlab-body">
+  
+
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">
+          SimLab<span>.id</span>
+        </div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="#simulasi-populer">Simulasi</a>
+        <a href="about.html">Tentang</a>
+        <a href="#guru">Untuk Guru</a>
+        <a href="sains-quran.html">Sains dalam Al-Qur’an</a>
+
+      </nav>
+
+      <div class="slb-nav-right">
+        <!-- tombol tema -->
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Ganti tema terang/gelap"
+        >
+          🌙
+        </button>
+
+        <span class="slb-nav-badge">Beta</span>
+        <a href="auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="sl-main">
+
+    <!-- HEADER HALAMAN -->
+    <section class="sl-page-header">
+      <p class="sl-kicker">Daftar Simulasi</p>
+      <h1>Simulasi IPA &amp; Kebumian di SimLab.id</h1>
+      <p class="sl-subtitle">
+        Halaman ini merangkum simulasi yang sudah tersedia dan rencana pengembangan ke depan.
+        Versi lomba ini berfokus pada satu simulasi utama: <strong>Tata Surya Interaktif</strong>.
+      </p>
+    </section>
+
+    <!-- FILTER (dummy dulu, belum interaktif) -->
+    <section class="sl-filter-bar">
+      <div class="sl-filter-group">
+        <span class="sl-filter-label">Kategori</span>
+        <div class="sl-filter-chips">
+          <span class="sl-chip sl-chip-active">Semua</span>
+          <span class="sl-chip">Ilmu Kebumian</span>
+          <span class="sl-chip">Fisika</span>
+          <span class="sl-chip">Listrik</span>
+        </div>
+      </div>
+
+      <div class="sl-filter-group">
+        <span class="sl-filter-label">Tingkat</span>
+        <div class="sl-filter-chips">
+          <span class="sl-chip sl-chip-active">SMP</span>
+          <span class="sl-chip sl-chip-active">SMA</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID SIMULASI -->
+    <section id="daftar-simulasi" class="sl-sim-grid">
+
+      <!-- SIMULASI 1: TATA SURYA (AKTIF) -->
+      <article class="sl-sim-card sl-sim-available">
+        <header class="sl-sim-header">
+          <div class="sl-sim-icon">🌍</div>
+          <div>
+            <h2>Tata Surya Interaktif</h2>
+            <p class="sl-sim-meta">Kategori: Ilmu Kebumian • Tingkat: SMP &amp; SMA</p>
+          </div>
+        </header>
+
+        <p class="sl-sim-desc">
+          Menampilkan orbit delapan planet mengelilingi Matahari dengan visual sederhana.
+          Siswa dapat mengamati perbedaan jarak relatif dan periode orbit.
+        </p>
+
+        <ul class="sl-sim-points">
+          <li>Orbit planet berputar mengelilingi Matahari</li>
+          <li>Planet dapat diklik untuk melihat informasi singkat</li>
+          <li>Kontrol kecepatan orbit (0.5x, 1x, 2x)</li>
+        </ul>
+
+        <footer class="sl-sim-footer">
+          <a href="tata-surya/index.html" class="slb-btn slb-btn-primary slb-btn-sm">
+            🚀 Buka Simulasi
+          </a>
+          <span class="sl-tag sl-tag-ready">Tersedia</span>
+        </footer>
+      </article>
+
+      <!-- SIMULASI 2: GERAK LURUS -->
+      <article class="sl-sim-card sl-sim-soon">
+        <header class="sl-sim-header">
+          <div class="sl-sim-icon">🚗</div>
+          <div>
+            <h2>Gerak Lurus (GLB &amp; GLBB)</h2>
+            <p class="sl-sim-meta">Kategori: Fisika • Tingkat: SMP &amp; SMA</p>
+          </div>
+        </header>
+
+        <p class="sl-sim-desc">
+          Simulasi gerak lurus dengan objek bergerak di lintasan, untuk membantu siswa
+          memahami hubungan antara jarak, waktu, kecepatan, dan percepatan.
+        </p>
+
+        <ul class="sl-sim-points">
+          <li>Visual lintasan lurus dengan posisi objek yang berubah terhadap waktu</li>
+          <li>Rencana: pengaturan kecepatan awal &amp; percepatan</li>
+          <li>Grafik sederhana posisi–waktu atau kecepatan–waktu</li>
+        </ul>
+
+        <footer class="sl-sim-footer">
+          <button class="slb-btn slb-btn-outline slb-btn-sm" disabled>
+            Segera Hadir
+          </button>
+          <span class="sl-tag sl-tag-planned">Rencana pengembangan</span>
+        </footer>
+      </article>
+
+      <!-- SIMULASI 3: RANGKAIAN LISTRIK -->
+      <article class="sl-sim-card sl-sim-soon">
+        <header class="sl-sim-header">
+          <div class="sl-sim-icon">🔌</div>
+          <div>
+            <h2>Rangkaian Listrik Sederhana</h2>
+            <p class="sl-sim-meta">Kategori: Listrik • Tingkat: SMP &amp; SMA</p>
+          </div>
+        </header>
+
+        <p class="sl-sim-desc">
+          Simulasi rangkaian seri dan paralel untuk memperlihatkan bagaimana perubahan
+          resistor memengaruhi arus dan tegangan dalam rangkaian.
+        </p>
+
+        <ul class="sl-sim-points">
+          <li>Tampilan skematik sederhana seri dan paralel</li>
+          <li>Rencana: indikator lampu lebih terang / redup</li>
+          <li>Rencana: slider untuk mengatur nilai resistor</li>
+        </ul>
+
+        <footer class="sl-sim-footer">
+          <button class="slb-btn slb-btn-outline slb-btn-sm" disabled>
+            Segera Hadir
+          </button>
+          <span class="sl-tag sl-tag-planned">Dalam perancangan</span>
+        </footer>
+      </article>
+
+    </section>
+
+    <!-- SECTION RINGKAS UNTUK GURU -->
+    <section class="sl-note-section">
+      <h2>Catatan untuk guru &amp; penyelenggara lomba</h2>
+      <p>
+        Pada tahap lomba ini, fokus utama pengembangan ada pada simulasi
+        <strong>Tata Surya Interaktif</strong> sebagai contoh konkret.
+        Struktur sistem, folder, dan tampilan sudah disiapkan agar ke depan
+        simulasi lain (Gerak Lurus, Listrik, dan seterusnya) dapat ditambahkan
+        tanpa mengubah kerangka utama.
+      </p>
+      <p>
+        Dengan demikian, SimLab.id tidak hanya menjadi demo satu fitur,
+        tetapi kerangka awal <em>laboratorium sains digital lokal</em> yang
+        dapat terus dikembangkan bersama guru dan siswa di Indonesia.
+      </p>
+    </section>
+  </main>
+
+  <!-- FOOTER PRO -->
+  <footer class="slb-footer-pro">
+    <div class="footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">SL</div>
+        <h3 class="footer-title">SimLab.id</h3>
+        <p class="footer-desc">
+          Laboratorium Sains Digital untuk Sekolah Indonesia.
+          Dibuat oleh dosen &amp; mahasiswa Ilmu Komputer.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-subtitle">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Beranda</a></li>
+          <li><a href="#daftar-simulasi">Simulasi</a></li>
+          <li><a href="../about.html">Tentang</a></li>
+          <li><a href="../index.html#guru">Untuk Guru</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-subtitle">Informasi</h4>
+        <ul class="footer-links">
+          <li><a href="#">Dokumentasi</a></li>
+          <li><a href="#">Roadmap Proyek</a></li>
+          <li><a href="#">Hubungi Tim</a></li>
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 SimLab.id • Ilkom • Indonesia
+    </div>
+  </footer>
+
+  <!-- JS NAVBAR -->
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

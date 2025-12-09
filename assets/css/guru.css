@@ -1,0 +1,31 @@
+.guru-hero-full {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  background-image: url("../img/header-guru.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guru-hero-overlay {
+  text-align: center;
+  color: #fff;
+  background: rgba(15,23,42,0.4);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  max-width: 720px;
+}
+
+.guru-detail {
+  padding: 3rem 1rem;
+}
+
+.guru-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}

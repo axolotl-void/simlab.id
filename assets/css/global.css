@@ -1,0 +1,1745 @@
+:root {
+  --slb-bg: #020617;
+  --slb-bg-alt: #02081a;
+  --slb-bg-soft: #0b1220;
+  --slb-text: #e5e7eb;
+  --slb-text-muted: #9ca3af;
+  --slb-primary: #38bdf8;
+  --slb-primary-deep: #0ea5e9;
+  --slb-accent: #6366f1;
+  --slb-border-soft: rgba(148, 163, 184, 0.35);
+  --slb-radius-lg: 18px;
+  --slb-radius-md: 14px;
+  --slb-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.85);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.simlab-body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #172554 0, #020617 55%, #000 100%);
+  color: var(--slb-text);
+}
+
+/* Sections */
+
+.section {
+  padding: 40px 24px;
+}
+
+.section-light {
+  padding: 40px 24px;
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #02010b 100%);
+}
+
+.section-dark-alt {
+  padding: 32px 24px 40px;
+  background: radial-gradient(circle at bottom, #020617 0, #020617 50%, #000 100%);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.section-header h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+.section-header p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--slb-text-muted);
+  max-width: 1640px;
+}
+
+/* Hero */
+
+.hero {
+  padding: 36px 24px 32px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-kicker {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slb-primary);
+  margin-bottom: 8px;
+}
+
+.hero-left h1 {
+  margin: 0 0 12px;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.2;
+}
+.hero-left h1 span {
+  color: var(--slb-primary);
+}
+
+.hero-subtitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--slb-text-muted);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Pills */
+
+.slb-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 11px;
+  color: var(--slb-text-muted);
+}
+
+/* Hero right orbit card */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-orbit-card {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1 / 1.05;
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  border-radius: var(--slb-radius-lg);
+  border: 1px solid var(--slb-border-soft);
+  box-shadow: var(--slb-shadow-soft);
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-orbit {
+  position: absolute;
+  border-radius: 999px;
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+  inset: 18%;
+}
+
+.hero-orbit.sun {
+  inset: 45%;
+  border: none;
+  background: radial-gradient(circle at 30% 30%, #facc15, #f97316);
+  box-shadow: 0 0 35px rgba(250, 204, 21, 0.8);
+}
+
+.hero-orbit.orbit-1 {
+  inset: 32%;
+}
+.hero-orbit.orbit-2 {
+  inset: 24%;
+}
+.hero-orbit.orbit-3 {
+  inset: 16%;
+}
+.hero-orbit.orbit-4 {
+  inset: 8%;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  border-radius: 999px;
+}
+.planet.p1 {
+  width: 10px;
+  height: 10px;
+  background: #f97316;
+}
+.planet.p2 {
+  width: 12px;
+  height: 12px;
+  background: #22c55e;
+}
+.planet.p3 {
+  width: 14px;
+  height: 14px;
+  background: #38bdf8;
+}
+.planet.p4 {
+  width: 18px;
+  height: 18px;
+  background: #a855f7;
+}
+
+.hero-orbit-caption {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  font-size: 11px;
+  color: var(--slb-text-muted);
+}
+
+/* Buttons */
+
+.slb-btn {
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: transform 0.08s ease, box-shadow 0.08s ease,
+    background 0.12s ease, border-color 0.12s ease;
+}
+
+.slb-btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.slb-btn-primary {
+  background: linear-gradient(135deg, var(--slb-accent), var(--slb-primary));
+  color: #0b1020;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+}
+
+.slb-btn-outline {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: var(--slb-text);
+}
+
+.slb-btn-ghost {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  color: var(--slb-text);
+}
+
+.slb-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.85);
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.slb-card {
+  background: rgba(15, 23, 42, 0.98);
+  border-radius: var(--slb-radius-lg);
+  border: 1px solid var(--slb-border-soft);
+  padding: 16px 16px 14px;
+  box-shadow: var(--slb-shadow-soft);
+  font-size: 13px;
+}
+
+.slb-card-muted {
+  opacity: 0.85;
+}
+
+.slb-card-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  color: var(--slb-text-muted);
+  margin-bottom: 8px;
+}
+
+.slb-card h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.slb-card p {
+  margin: 0 0 8px;
+  color: var(--slb-text-muted);
+}
+
+.slb-card-list {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  color: var(--slb-text-muted);
+}
+
+.slb-card-coming {
+  font-size: 12px;
+  color: var(--slb-text-muted);
+  font-style: italic;
+}
+
+.slb-card-link {
+  font-size: 13px;
+  color: var(--slb-primary);
+  text-decoration: none;
+}
+
+/* Steps */
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  font-size: 13px;
+}
+
+.step-item {
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: var(--slb-radius-md);
+  border: 1px solid var(--slb-border-soft);
+  padding: 14px 14px 12px;
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--slb-accent), var(--slb-primary));
+  color: #020617;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.step-item h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.step-item p {
+  margin: 0;
+  color: var(--slb-text-muted);
+}
+
+/* Footer CTA */
+
+.footer-cta {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-cta h2 {
+  margin: 0 0 4px;
+  font-size: 22px;
+}
+.footer-cta p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--slb-text-muted);
+}
+
+.footer-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Footer */
+
+.slb-footer {
+  padding: 10px 24px 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.9);
+  background: #020617;
+}
+
+.slb-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  font-size: 11px;
+  color: var(--slb-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.slb-footer-mini {
+  opacity: 0.8;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-right {
+    order: -1;
+  }
+  .card-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 28px;
+  }
+}
+
+/* ---- SIMULASI POPULER ---- */
+.simulasi-populer {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.simulasi-populer h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.simulasi-populer .subtext {
+  color: #b5b5b5;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+.simulasi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.sim-card {
+  background: #1e1e1e;
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid #2d2d2d;
+  text-align: left;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.sim-card:hover {
+  transform: translateY(-5px);
+  border-color: #3a3a3a;
+}
+
+.sim-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.sim-card h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.sim-card p {
+  color: #cfcfcf;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.sim-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #4a7dfc;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.sim-btn:hover {
+  background: #3f6bdd;
+}
+
+/* Badge untuk "Segera Hadir" */
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #d45c5c;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Blur untuk simulasi yang belum rilis */
+.soon {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ===== UNTUK GURU SECTION ===== */
+
+.guru-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.guru-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+  gap: 24px;
+}
+
+.guru-col h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #e5e7eb;
+}
+
+.guru-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.guru-list li strong {
+  color: #e5e7eb;
+}
+
+.guru-note {
+  font-size: 12px;
+  color: #9ca3af;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(75, 85, 99, 0.8);
+  background: radial-gradient(circle at top left, #1f2937, #020617);
+}
+
+/* Skenario di kolom kanan */
+
+.guru-scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.guru-scenario-item {
+  border-radius: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top, #020617, #020617 40%, #030712 100%);
+}
+
+.guru-scenario-item p {
+  margin: 4px 0 0;
+  color: #9ca3af;
+}
+
+.guru-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  color: #e5e7eb;
+}
+
+/* Kartu fitur guru */
+
+.guru-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.guru-card {
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top left, #020617, #020617 45%, #020617 100%);
+}
+
+.guru-card h4 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.guru-card p {
+  margin: 0;
+  color: #9ca3af;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .guru-main {
+    grid-template-columns: 1fr;
+  }
+
+  .guru-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== FOOTER PRO VERSION ========== */
+
+.slb-footer-pro {
+  margin-top: 40px;
+  padding: 40px 22px 20px;
+  background: #020617;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 24px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #e5e7eb;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+  color: white;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.footer-title {
+  margin: 0;
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.footer-desc {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.footer-subtitle {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e5e7eb;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  padding-top: 18px;
+  margin-top: 24px;
+  color: #64748b;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.hero.hero-bg {
+  position: relative;
+  min-height: 320px;
+  padding: 72px 24px;
+  background-image: url("../img/hero/hero-simlab.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* overlay gelap tipis biar teks kebaca */
+/* kalau kamu sudah punya versi sendiri, yang ini boleh di-skip */
+.hero.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.8),
+    rgba(15, 23, 42, 0.45),
+    rgba(15, 23, 42, 0.8)
+  );
+}
+
+.hero-inner {
+  position: relative; /* biar di atas overlay */
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 1.2;
+}
+
+/* =============== SIMULASI POPULER =============== */
+
+.simulasi-populer {
+  padding: 64px 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.simulasi-populer h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.simulasi-populer .subtext {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+/* GRID KARTU */
+.simulasi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* KARTU DASAR */
+.sim-card {
+  background: rgba(15, 23, 42, 0.9); /* dark blue */
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55);
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+              border-color 0.18s ease-out, translate 0.18s ease-out;
+  position: relative;
+}
+
+.sim-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.8);
+  border-color: rgba(94, 234, 212, 0.7); /* aksen toska dikit */
+}
+
+/* KARTU “SEGERA HADIR” */
+.sim-card.soon::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  opacity: 0.9;
+}
+
+/* THUMBNAIL GAMBAR DI ATAS KARTU */
+.sim-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  position: relative;
+}
+
+.sim-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.03);
+  transition: transform 0.25s ease-out, filter 0.25s ease-out;
+}
+
+.sim-card:hover .sim-card-thumb img {
+  transform: scale(1.07);
+  filter: brightness(1.05);
+}
+
+/* ISI TEKS KARTU */
+.sim-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sim-card-body h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.sim-card-body p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin: 0 0 4px 0;
+}
+
+/* TOMBOL KECIL DI KARTU */
+.sim-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 234, 212, 0.9);
+  background: radial-gradient(circle at top left,
+    rgba(45, 212, 191, 0.35),
+    rgba(15, 23, 42, 0.95)
+  );
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sim-btn:hover {
+  border-color: rgba(125, 211, 252, 0.95);
+  background: radial-gradient(circle at top right,
+    rgba(56, 189, 248, 0.35),
+    rgba(15, 23, 42, 0.98)
+  );
+}
+
+/* BADGE “SEGERA HADIR” DI DALAM TEKS */
+.sim-card .badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.8);
+  margin-top: 4px;
+}
+
+/* RESPONSIVE: TABLET & HP */
+@media (max-width: 960px) {
+  .simulasi-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .simulasi-populer {
+    padding-inline: 16px;
+  }
+
+  .simulasi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sim-card {
+    border-radius: 14px;
+  }
+}
+.subtext {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* =========================
+   THEME: DARK / LIGHT
+   default: dark
+   ========================= */
+
+/* DARK MODE (default) */
+.simlab-body {
+  background: #020617; /* hampir hitam, biru tua */
+  color: #e5e7eb;
+}
+
+/* beberapa elemen utama di dark mode */
+.simlab-body .section,
+.simlab-body .simulasi-populer {
+  background: transparent;
+  color: inherit;
+}
+
+.simlab-body .slb-navbar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.simlab-body .sim-card,
+.simlab-body .slb-card,
+.simlab-body .guru-card {
+  background: #0f172a;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* tombol theme di navbar */
+.theme-toggle {
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 1rem;
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  margin-right: 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: rgba(148, 163, 184, 0.15);
+}
+
+/* LIGHT MODE OVERRIDE */
+.simlab-body[data-theme="light"] {
+  background: #f3f4f6;
+  color: #0f172a;
+}
+
+/* navbar light */
+.simlab-body[data-theme="light"] .slb-navbar {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.9);
+}
+
+/* section & blok utama jadi lebih terang */
+.simlab-body[data-theme="light"] .section,
+.simlab-body[data-theme="light"] .simulasi-populer {
+  background: transparent;
+  color: inherit;
+}
+
+/* card-card */
+.simlab-body[data-theme="light"] .sim-card,
+.simlab-body[data-theme="light"] .slb-card,
+.simlab-body[data-theme="light"] .guru-card {
+  background: #ffffff;
+  border: 1px solid rgba(209, 213, 219, 0.9);
+}
+
+/* tombol theme light */
+.simlab-body[data-theme="light"] .theme-toggle {
+  background: #e5e7eb;
+  color: #111827;
+  border-color: rgba(156, 163, 175, 0.8);
+}
+
+.simlab-body[data-theme="light"] .theme-toggle:hover {
+  background: #d1d5db;
+}
+
+/* judul & link biar kontras di light mode */
+.simlab-body[data-theme="light"] h1,
+.simlab-body[data-theme="light"] h2,
+.simlab-body[data-theme="light"] h3,
+.simlab-body[data-theme="light"] h4 {
+  color: #0f172a;
+}
+
+.simlab-body[data-theme="light"] a {
+  color: #2563eb;
+}
+
+.simlab-body[data-theme="light"] a:hover {
+  color: #1d4ed8;
+}
+
+/* section footer dark-alt di light mode: sedikit abu */
+.simlab-body[data-theme="light"] .section-dark-alt {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* =========================
+   TEMA SIMULASI (KOTAK ALA PHET)
+   ========================== */
+
+.tema-section {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.tema-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1.75rem;
+}
+
+/* kartu utama */
+.tema-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 32px;
+  text-decoration: none;
+  text-align: center;
+
+  color: #020617;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  transform: translateY(0);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+/* gambar ikon di dalam kartu */
+.tema-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.9rem;
+}
+
+/* teks "FISIKA", "KIMIA", dll */
+.tema-card span {
+  font-size: 0.95rem;
+}
+
+/* efek hover */
+.tema-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+  filter: brightness(1.03);
+}
+
+/* warna pastel per tema */
+.tema-fisika {
+  background: #f9d7e5; /* pink lembut */
+}
+
+.tema-matematika {
+  background: #fff4c2; /* kuning lembut */
+}
+
+.tema-kimia {
+  background: #d9f1ff; /* biru muda */
+}
+
+.tema-kebumian {
+  background: #d9f5e8; /* hijau muda */
+}
+
+.tema-biologi {
+  background: #e4d7f9; /* ungu muda */
+}
+
+/* responsif di layar kecil */
+@media (max-width: 640px) {
+  .tema-grid {
+    gap: 1.1rem;
+  }
+
+  .tema-card {
+    width: 45%;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+  }
+
+  .tema-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .tema-card span {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================
+   TEMA SIMULASI (KOTAK 3D)
+   ========================== */
+
+.tema-section {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.tema-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1.75rem;
+}
+
+/* kartu utama */
+.tema-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 32px;
+  text-decoration: none;
+  text-align: center;
+
+  background: #f9fafb; /* fallback kalau gambar belum ada */
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  transform: translateY(0);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+/* gambar ikon di dalam kartu */
+.tema-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+/* teks "FISIKA", "KIMIA", dll */
+.tema-card span {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #020617;
+  text-shadow: 0 1px 3px rgba(15, 23, 42, 0.35);
+}
+
+/* bikin kontainer posisi relative biar span bisa nempel */
+.tema-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* efek hover */
+.tema-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+  filter: brightness(1.03);
+}
+
+/* responsif di layar kecil */
+@media (max-width: 640px) {
+  .tema-grid {
+    gap: 1.1rem;
+  }
+
+  .tema-card {
+    width: 45%;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+  }
+
+  .tema-card img {
+    border-radius: 24px;
+  }
+
+  .tema-card span {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* =========================
+   TEMA ILMU KEBUMIAN
+   ========================== */
+
+.kebumian-hero {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.kebumian-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.kebumian-hero-text h1 {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  line-height: 1.3;
+  margin-bottom: 0.9rem;
+}
+
+.kebumian-hero-text .hero-subtitle {
+  max-width: 40rem;
+}
+
+.kebumian-points {
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+}
+
+.kebumian-points li + li {
+  margin-top: 0.3rem;
+}
+
+.kebumian-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.kebumian-hero-card {
+  width: 260px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 32px;
+  background: radial-gradient(circle at top, #e0fdf3 0%, #14b8a6 55%, #0f766e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+  overflow: hidden;
+}
+
+.kebumian-hero-card img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* link kembali */
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* LIST SUB-SIMULASI */
+.kebumian-sim-list {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.sub-sim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.75rem;
+}
+
+.sub-sim-card {
+  border-radius: 18px;
+  padding: 1.4rem 1.4rem 1.3rem;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sub-sim-card h3 {
+  font-size: 1.05rem;
+  margin: 0.4rem 0 0.1rem;
+}
+
+.sub-sim-card p {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.sub-sim-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sub-sim-live .sub-sim-tag {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+
+.sub-sim-soon .sub-sim-tag {
+  background: rgba(148, 163, 184, 0.18);
+  color: #e5e7eb;
+}
+
+.sub-sim-bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.sub-sim-bullets li + li {
+  margin-top: 0.25rem;
+}
+
+.sub-sim-coming {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.sub-sim-btn {
+  margin-top: 0.35rem;
+  align-self: flex-start;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .kebumian-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: left;
+  }
+
+  .kebumian-hero-visual {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-sim-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =========================
+   SECTION GURU & PENGAJAR
+   ========================== */
+
+.guru-section {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+/* hero atas: teks + gambar */
+.guru-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.guru-hero-text h2 {
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+  margin-bottom: 0.6rem;
+}
+
+.guru-hero-text p {
+  max-width: 40rem;
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+.guru-hero-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.guru-hero-image img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  display: block;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.55);
+}
+
+/* layout bawah tetap pake style lama, tapi kalau belum ada: */
+
+.guru-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 3fr);
+  gap: 2.25rem;
+  margin-top: 1.2rem;
+}
+
+.guru-col h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.guru-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.guru-list li + li {
+  margin-top: 0.45rem;
+}
+
+.guru-note {
+  margin-top: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.guru-scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.guru-scenario-item {
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.guru-tag {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.18);
+  color: #bae6fd;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+/* kartu kecil di paling bawah */
+.guru-card-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.guru-card {
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* responsive */
+@media (max-width: 960px) {
+  .guru-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .guru-hero-image {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 820px) {
+  .guru-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .guru-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* HERO: GURU & PENGAJAR */
+
+.guru-hero-full {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  background-image: url("../img/header-guru.png"); /* karena CSS ada di assets/css */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guru-hero-overlay {
+  text-align: center;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.4);
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(4px);
+  max-width: 720px;
+  margin: 3rem 1.5rem;
+}
+
+.guru-hero-overlay h2 {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.guru-hero-overlay p {
+  font-size: 1rem;
+  max-width: 42rem;
+  margin: 0 auto 1rem auto;
+  line-height: 1.6;
+}
+
+.guru-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+/* detail guru (layout bawah) */
+
+.guru-detail {
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.guru-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-inline: 0.5rem;
+}
+
+
+
+.guru-col h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.guru-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.guru-list li + li {
+  margin-top: 0.45rem;
+}
+
+.guru-note {
+  margin-top: 0.9rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.guru-scenarios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+.guru-scenario-item {
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.guru-tag {
+  display: inline-flex;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.18);
+  color: #bae6fd;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+/* kartu fitur di bawah */
+
+.guru-card-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.guru-card {
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* responsive */
+
+@media (max-width: 960px) {
+  .guru-hero-overlay {
+    margin: 2.5rem 1rem;
+    padding: 1.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .guru-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .guru-card-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* =========================
+   PAGE LOAD FADE
+   ========================== */
+
+.page-fade {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(2px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out,
+    filter 0.45s ease-out;
+}
+
+/* ketika halaman sudah ready */
+body.page-loaded .page-fade {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simulasi Gerak Lurus (GLB & GLBB) - SimLab.id</title>
+
+    <!-- Global style (kalau perlu tema dark-nya ikut) -->
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <!-- Style khusus simulasi GLB -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="simlab-body" data-theme="dark">
+    <main class="glb-page page-fade">
+      <header class="glb-header">
+        <a href="../../index.html" class="back-link">← Kembali ke Beranda</a>
+        <h1>Simulasi Gerak Lurus (GLB &amp; GLBB)</h1>
+        <p>
+          Amati gerak sebuah benda di lintasan lurus. Atur kecepatan awal dan
+          percepatan, lalu lihat bagaimana posisi benda berubah terhadap waktu.
+        </p>
+      </header>
+
+      <section class="glb-layout">
+        <!-- Area lintasan -->
+        <div class="glb-track-card">
+          <div class="glb-track">
+            <div id="glb-object" class="glb-object"></div>
+            <div class="glb-scale">
+              <span>0 m</span>
+              <span>5 m</span>
+              <span>10 m</span>
+              <span>15 m</span>
+              <span>20 m</span>
+            </div>
+          </div>
+
+          <div class="glb-info">
+            <div><strong>t</strong> = <span id="info-t">0.00</span> s</div>
+            <div><strong>x</strong> = <span id="info-x">0.00</span> m</div>
+            <div><strong>v</strong> = <span id="info-v">0.00</span> m/s</div>
+          </div>
+        </div>
+
+        <!-- Panel kontrol -->
+        <div class="glb-control-card">
+          <h2>Pengaturan Gerak</h2>
+
+          <div class="glb-field">
+            <label for="mode">Mode gerak</label>
+            <select id="mode">
+              <option value="glb">GLB (a = 0)</option>
+              <option value="glbb">GLBB (a ≠ 0)</option>
+            </select>
+          </div>
+
+          <div class="glb-field">
+            <label for="v0">Kecepatan awal v₀ (m/s)</label>
+            <input
+              type="range"
+              id="v0"
+              min="-10"
+              max="10"
+              step="0.5"
+              value="4"
+            />
+            <div class="glb-field-value">
+              v₀ = <span id="v0-label">4.0</span> m/s
+            </div>
+          </div>
+
+          <div class="glb-field">
+            <label for="a">Percepatan a (m/s²)</label>
+            <input
+              type="range"
+              id="a"
+              min="-5"
+              max="5"
+              step="0.5"
+              value="0"
+            />
+            <div class="glb-field-value">
+              a = <span id="a-label">0.0</span> m/s²
+            </div>
+            <p class="glb-hint">
+              Untuk GLB, percepatan otomatis dianggap 0 (garis lurus kecepatan
+              tetap).
+            </p>
+          </div>
+
+          <div class="glb-field">
+            <label for="tmax">Durasi simulasi (s)</label>
+            <input
+              type="range"
+              id="tmax"
+              min="2"
+              max="20"
+              step="1"
+              value="10"
+            />
+            <div class="glb-field-value">
+              t<sub>maks</sub> = <span id="tmax-label">10</span> s
+            </div>
+          </div>
+
+          <div class="glb-buttons">
+            <button id="btn-play">▶ Mulai</button>
+            <button id="btn-pause">⏸ Jeda</button>
+            <button id="btn-reset">⟲ Reset</button>
+          </div>
+
+          <div class="glb-note">
+            Persamaan yang digunakan:
+            <code>x(t) = x₀ + v₀·t + ½·a·t²</code><br />
+            dengan x₀ = 0 m dan lintasan disederhanakan 0–20 meter.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

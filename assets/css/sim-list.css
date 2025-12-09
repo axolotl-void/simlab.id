@@ -1,0 +1,214 @@
+/* ===== HALAMAN DAFTAR SIMULASI ===== */
+
+.sl-main {
+  padding: 26px 18px 34px;
+}
+
+/* HEADER HALAMAN */
+
+.sl-page-header {
+  max-width: 900px;
+  margin: 0 auto 22px;
+}
+
+.sl-kicker {
+  margin: 0 0 4px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #60a5fa;
+}
+
+.sl-page-header h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  color: #e5e7eb;
+}
+
+.sl-subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* FILTER BAR (DUMMY) */
+
+.sl-filter-bar {
+  max-width: 900px;
+  margin: 0 auto 18px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top left, #020617, #020617 60%, #020617 100%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.sl-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sl-filter-label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.sl-filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sl-chip {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  color: #9ca3af;
+  background: #020617;
+}
+
+.sl-chip-active {
+  border-color: #60a5fa;
+  color: #bfdbfe;
+}
+
+/* GRID SIMULASI */
+
+.sl-sim-grid {
+  max-width: 1100px;
+  margin: 0 auto 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+}
+
+.sl-sim-card {
+  border-radius: 18px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top, #020617, #020617 60%, #020617 100%);
+  padding: 14px 14px 12px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sl-sim-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sl-sim-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(55, 65, 81, 1);
+}
+
+.sl-sim-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #e5e7eb;
+}
+
+.sl-sim-meta {
+  margin: 0;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.sl-sim-desc {
+  margin: 0;
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+.sl-sim-points {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.sl-sim-footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* TAG STATUS */
+
+.sl-tag {
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+}
+
+.sl-tag-ready {
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+
+.sl-tag-planned {
+  border-color: #facc15;
+  color: #fef3c7;
+}
+
+/* Warna sedikit beda antara tersedia vs soon */
+
+.sl-sim-available {
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+.sl-sim-soon {
+  border-style: dashed;
+}
+
+/* SECTION CATATAN */
+
+.sl-note-section {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: radial-gradient(circle at top left, #020617, #020617 55%, #020617 100%);
+  padding: 14px 14px 12px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.sl-note-section h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: #e5e7eb;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .sl-sim-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sl-main {
+    padding-inline: 12px;
+  }
+
+  .sl-filter-bar {
+    padding-inline: 10px;
+  }
+}

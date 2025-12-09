@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulasi Tata Surya - SimLab.id</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS global + navbar + khusus simulasi -->
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../../assets/css/sim-tata-surya.css" />
+</head>
+<body class="simlab-body">
+
+  <!-- NAVBAR -->
+  <header class="slb-navbar">
+    <div class="slb-nav-inner">
+      <a href="../../index.html" class="slb-logo">
+        <div class="slb-logo-mark">SL</div>
+        <div class="slb-logo-text">SimLab<span>.id</span></div>
+      </a>
+
+      <nav class="slb-nav-links">
+        <a href="../../index.html">Beranda</a>
+        <a href="../../index.html#simulasi-populer" class="active">Simulasi</a>
+        <a href="../../about.html">Tentang</a>
+        <a href="../../index.html#guru">Untuk Guru</a>
+      </nav>
+
+      <div class="slb-nav-right">
+        <span class="slb-nav-badge">Beta</span>
+        <a href="../../auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
+          Masuk
+        </a>
+      </div>
+
+      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main class="sim-main">
+    <!-- HEADER SIMULASI -->
+    <section class="sim-header">
+      <div>
+        <p class="sim-kicker">Simulasi Interaktif • Ilmu Kebumian</p>
+        <h1>Tata Surya 2D Interaktif</h1>
+        <p class="sim-subtitle">
+          Amati orbit planet mengelilingi Matahari. Seret planet, tambahkan planet/asteroid,
+          dan lihat apa yang terjadi saat mereka bertabrakan. Cocok untuk diskusi gaya
+          gravitasi &amp; konsep orbit secara kualitatif.
+        </p>
+        <p class="sim-note">
+          Ilustrasi tidak skala sebenarnya. Jarak &amp; ukuran planet disederhanakan untuk kebutuhan belajar.
+        </p>
+      </div>
+    </section>
+
+    <!-- LAYOUT UTAMA: SIDEBAR KIRI • KANVAS • PANEL KANAN -->
+    <section class="sim-layout">
+      <!-- Panel kiri: kontrol -->
+      <aside class="sim-sidebar">
+        <h2>Kontrol Simulasi</h2>
+
+        <div class="sim-control-group">
+          <h3>Waktu &amp; tampilan</h3>
+          <label class="sim-label">
+            Kecepatan Orbit
+            <input id="speedSlider" type="range" min="0.2" max="3" step="0.1" value="1" />
+          </label>
+          <label class="sim-checkbox">
+            <input id="trailToggle" type="checkbox" checked />
+            Tampilkan jejak orbit
+          </label>
+        </div>
+
+        <div class="sim-control-group">
+          <h3>Tambah Objek</h3>
+          <p class="sim-help">
+            Klik di area kanvas untuk menentukan posisi awal,
+            lalu pilih jenis objek di bawah ini.
+          </p>
+          <button id="addPlanetBtn" class="slb-btn slb-btn-primary slb-btn-sm">
+            + Tambah Planet
+          </button>
+          <button id="addAsteroidBtn" class="slb-btn slb-btn-ghost slb-btn-sm">
+            + Tambah Asteroid
+          </button>
+          <p class="sim-mini">
+            Objek baru akan mengorbit Matahari berdasarkan posisi awalnya.
+            (Fisika disederhanakan agar simulasi tetap ringan.)
+          </p>
+        </div>
+
+        <div class="sim-control-group">
+          <h3>Tabrakan &amp; Reset</h3>
+          <p class="sim-mini">
+            Jika dua objek saling bertabrakan, objek yang lebih kecil akan
+            <strong>meledak</strong> dan hilang dari sistem.
+          </p>
+          <button id="resetBtn" class="slb-btn slb-btn-outline slb-btn-sm">
+            Reset Tata Surya
+          </button>
+        </div>
+
+        <div class="sim-control-group sim-legend">
+          <h3>Legenda</h3>
+          <p><span class="legend-sun"></span> Matahari</p>
+          <p><span class="legend-planet"></span> Planet</p>
+          <p><span class="legend-asteroid"></span> Asteroid</p>
+        </div>
+      </aside>
+
+      <!-- Kanvas utama -->
+           <!-- Kanvas utama -->
+      <section class="sim-canvas-wrap">
+        <canvas id="solarCanvas" width="1400" height="1400">
+          Browser Anda tidak mendukung elemen canvas.
+        </canvas>
+
+        <!-- Kontrol kecil di bawah kanvas -->
+        <div class="sim-canvas-controls">
+          <label for="zoomSlider">Zoom</label>
+          <input
+            id="zoomSlider"
+            type="range"
+            min="0.6"
+            max="1.6"
+            step="0.05"
+            value="1"
+          />
+        </div>
+      </section>
+
+
+      <!-- Panel info + tafakkur -->
+      <aside class="sim-info-panel">
+        <h2>Info Objek &amp; Mode Tafakkur</h2>
+
+        <div class="planet-info-box">
+          <h3 id="infoName">Belum ada objek terpilih</h3>
+          <p id="infoDesc">
+            Klik salah satu planet atau asteroid di kanvas untuk melihat detailnya.
+          </p>
+          <dl class="planet-meta">
+            <div>
+              <dt>Jenis</dt>
+              <dd id="infoType">-</dd>
+            </div>
+            <div>
+              <dt>Jarak relatif dari Matahari</dt>
+              <dd id="infoDist">-</dd>
+            </div>
+            <div>
+              <dt>Periode orbit (relatif Bumi)</dt>
+              <dd id="infoPeriod">-</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="tafakkur-box">
+          <div class="tafakkur-header">
+            <h3>Mode Tafakkur</h3>
+            <span class="tafakkur-tag">Sains &amp; Al-Qur’an</span>
+          </div>
+          <p id="tafakkurText" class="tafakkur-text">
+            Pilih planet untuk menampilkan ayat Al-Qur’an yang mengajak kita
+            merenungkan keteraturan alam semesta.
+          </p>
+          <p id="tafakkurAyat" class="tafakkur-ayat">
+            ﴿ إِنَّ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ وَاخْتِلَافِ اللَّيْلِ وَالنَّهَارِ
+            لَآيَاتٍ لِأُولِي الْأَلْبَابِ ﴾
+          </p>
+          <p id="tafakkurRef" class="tafakkur-ref">
+            QS. Ali ‘Imran [3]: 190
+          </p>
+          <p class="tafakkur-footnote">
+            *Teks ayat dan penjelasan dapat disesuaikan dengan rujukan tafsir yang
+            disetujui pembina agama di sekolah Anda.
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Catatan untuk guru -->
+    <section class="sim-teacher-note section section-light">
+      <div class="section-inner">
+        <h2>Catatan untuk Guru</h2>
+        <p>
+          Simulasi ini menggunakan model gravitasi yang disederhanakan agar dapat
+          berjalan ringan di banyak perangkat. Gunakan untuk:
+        </p>
+        <ul>
+          <li>Menjelaskan konsep orbit secara kualitatif (dekat–jauh, cepat–lambat).</li>
+          <li>Mendiskusikan efek tabrakan asteroid terhadap planet.</li>
+          <li>Mengaitkan keteraturan gerak benda langit dengan ayat-ayat kauniyah.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="slb-footer">
+    <div class="slb-footer-inner">
+      <span>© 2025 SimLab.id • Dibuat oleh tim dosen &amp; mahasiswa Ilmu Komputer</span>
+      <span class="slb-footer-mini">
+        Fokus: sekolah menengah • Versi lomba nasional
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/sim-tata-surya.js" defer></script>
+</body>
+</html>

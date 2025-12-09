@@ -1,0 +1,134 @@
+/* Layout umum (ikut gaya halaman lain) */
+.sim-main {
+  padding: 5rem min(4vw, 3rem) 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.sim-header {
+  margin-bottom: 2rem;
+}
+
+.sim-kicker {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  margin-bottom: 0.2rem;
+}
+
+.sim-header h1 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  margin-bottom: 0.5rem;
+  color: #e5e7eb;
+}
+
+.sim-subtitle {
+  color: #cbd5f5;
+  max-width: 700px;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+}
+
+.sim-note {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ===== BOARD 1200 x 600 ===== */
+
+.board-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.board-wrapper {
+  position: relative;
+  width: 1200px;
+  height: 600px;
+  border-radius: 28px;
+  background: #050029;
+  border: 6px solid #050029;
+  box-shadow:
+    0 0 0 4px #facc15 inset,
+    0 18px 40px rgba(15, 23, 42, 0.85);
+  overflow: hidden;
+}
+
+/* Toolbar di atas papan */
+.board-toolbar {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 80px;
+  background: #f9fafb;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.tool-btn {
+  width: 80px;
+  height: 70px;
+  border: none;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  border-right: 1px solid #e5e7eb;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.tool-btn:last-child {
+  border-right: none;
+}
+
+.tool-btn img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tool-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.tool-btn:active {
+  background: #e5e7eb;
+  transform: translateY(0);
+}
+
+/* Canvas papan */
+#circuitBoard {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Hint di bawah papan */
+.board-hint {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Responsif (kalau layar lebih kecil dari 1200px) */
+@media (max-width: 1260px) {
+  .board-wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 600;
+  }
+}

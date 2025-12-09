@@ -1,0 +1,19 @@
+.kebumian-hero {
+  padding: 4rem 1rem;
+}
+
+.kebumian-hero-inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+.kebumian-hero-card {
+  width: 260px;
+  aspect-ratio: 1/1;
+  border-radius: 32px;
+  background: radial-gradient(circle, #e0fdf3, #14b8a6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
