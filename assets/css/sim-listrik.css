@@ -1,134 +1,409 @@
-/* Layout umum (ikut gaya halaman lain) */
+/* ================================
+   SIM-LISTRIK.CSS
+   Khusus halaman: /simulasi/listrik/
+   ================================ */
+
+/* ===== RESET RINGAN ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+/* ===== LAYOUT UTAMA HALAMAN SIMULASI ===== */
+
+.simlab-body {
+  min-height: 100vh;
+  /* background ikut global (supaya sama dengan homepage) */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+/* Konten utama simulasi */
 .sim-main {
-  padding: 5rem min(4vw, 3rem) 3rem;
-  max-width: 1300px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 1.75rem auto 2.5rem;
+  padding: 0 1.5rem;
 }
 
 .sim-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .sim-kicker {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #38bdf8;
-  margin-bottom: 0.2rem;
-}
-
-.sim-header h1 {
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
-  margin-bottom: 0.5rem;
-  color: #e5e7eb;
-}
-
-.sim-subtitle {
-  color: #cbd5f5;
-  max-width: 700px;
-  line-height: 1.5;
+  color: #a5b4fc;
   margin-bottom: 0.3rem;
 }
 
-.sim-note {
-  font-size: 0.85rem;
-  color: #9ca3af;
+.sim-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
 }
 
-/* ===== BOARD 1200 x 600 ===== */
+.sim-subtitle {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  max-width: 720px;
+}
+
+.sim-note {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.4rem;
+}
+
+/* ===== BOARD WRAPPER & TOOLBAR ===== */
 
 .board-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
+  margin-top: 1.25rem;
 }
 
 .board-wrapper {
   position: relative;
-  width: 1200px;
-  height: 600px;
   border-radius: 28px;
-  background: #050029;
-  border: 6px solid #050029;
-  box-shadow:
-    0 0 0 4px #facc15 inset,
-    0 18px 40px rgba(15, 23, 42, 0.85);
-  overflow: hidden;
+  padding: 3.25rem 1.5rem 2rem; /* sedikit lebih dekat ke papan */
+  background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.9);
 }
 
-/* Toolbar di atas papan */
+/* Toolbar komponen (pil Hapus / Lampu / Kabel / dll) */
 .board-toolbar {
   position: absolute;
-  top: 18px;
   left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 80px;
+  top: 0.4rem;                      /* turun sedikit */
+  transform: translate(-50%, -40%); /* biar lebih dekat ke kotak kuning */
+  display: inline-flex;
   background: #f9fafb;
   border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.4);
   overflow: hidden;
-  border: 1px solid #e5e7eb;
-  z-index: 10;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(209, 213, 219, 0.9);
 }
 
 .tool-btn {
-  width: 80px;
-  height: 70px;
-  border: none;
-  background: #ffffff;
+  position: relative;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.85rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 0.15rem;
   cursor: pointer;
-  outline: none;
-  border-right: 1px solid #e5e7eb;
-  transition: background 0.15s ease, transform 0.1s ease;
+  border-right: 1px solid rgba(229, 231, 235, 0.9);
+  min-width: 90px;
+  background: transparent;
 }
 
 .tool-btn:last-child {
   border-right: none;
 }
 
-.tool-btn img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+.tool-btn .tool-label {
+  font-size: 0.75rem;
+  color: #4b5563;
 }
 
 .tool-btn:hover {
-  background: #f3f4f6;
-  transform: translateY(-1px);
+  background: rgba(226, 232, 240, 0.8);
 }
 
 .tool-btn:active {
-  background: #e5e7eb;
-  transform: translateY(0);
+  background: rgba(209, 213, 219, 0.9);
 }
 
-/* Canvas papan */
+/* Tombol reset papan di kiri atas board */
+.sim-reset-btn {
+  margin-bottom: 0.75rem;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.sim-reset-btn:hover {
+  background: rgba(30, 64, 175, 0.9);
+}
+
+/* ===== CANVAS BOARD ===== */
+
 #circuitBoard {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
   display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #050029;
+  border-radius: 26px;
 }
 
-/* Hint di bawah papan */
+/* Bantuan text di bawah papan */
 .board-hint {
-  font-size: 0.85rem;
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
   color: #9ca3af;
   text-align: center;
 }
 
-/* Responsif (kalau layar lebih kecil dari 1200px) */
-@media (max-width: 1260px) {
-  .board-wrapper {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1200 / 600;
+/* ===== PANEL KONTROL (TEGANGAN, INFO ARUS, DLL) ===== */
+
+.sim-controls {
+  max-width: 1200px;
+  margin: 16px auto 0;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.sim-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.sim-label {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  min-width: 140px;
+}
+
+#voltageSlider {
+  flex: 1;
+}
+
+.sim-value {
+  font-size: 0.9rem;
+  color: #facc15;
+  min-width: 70px;
+  text-align: right;
+}
+
+.sim-info-row {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
+
+.sim-info-main {
+  margin: 0 0 4px;
+}
+
+.sim-info-detail {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ===== FOOTER (ikut global, cuma layout dikunci dikit) ===== */
+
+.slb-footer {
+  border-top: 1px solid rgba(31, 41, 55, 0.9);
+  padding: 0.75rem 1.5rem 1.2rem;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.slb-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.slb-footer-mini {
+  opacity: 0.8;
+}
+
+/* ===== MINI KABEL (JIKA DIPAKAI TERPISAH) ===== */
+
+:root {
+  --cable: #b70000;
+  --stripe: #f9f9f9;
+  --electric: #ffd300;
+}
+
+/* Kasus khusus kalau kamu mau pakai komponen kabel mini statis di halaman ini */
+.cable {
+  position: relative;
+  width: min(600px, 70vw);
+  height: 55px;
+  background: var(--cable);
+  border-radius: 28px;
+  overflow: visible;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* Strip putih di tengah kabel */
+.cable::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 14px;
+  background: var(--stripe);
+  transform: translateY(-50%);
+}
+
+/* Animasi listrik kuning */
+.electricity {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  height: 22px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    60deg,
+    transparent 0 18px,
+    var(--electric) 18px 26px,
+    transparent 26px 54px
+  );
+  background-size: 90px 35px;
+  animation: flow 2.4s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(255, 211, 0, 0.7));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Konektor kecil */
+.connector {
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  background: var(--stripe);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.connector.left {
+  left: -25px;
+}
+
+.connector.right {
+  right: -25px;
+}
+
+/* Titik kuning tengah */
+.connector .dot {
+  width: 18px;
+  height: 18px;
+  background: var(--electric);
+  border-radius: 50%;
+}
+
+/* Animasi listrik */
+@keyframes flow {
+  0% {
+    background-position: -60px 0;
   }
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .sim-main {
+    margin-top: 1.25rem;
+  }
+
+  .board-wrapper {
+    padding: 3.8rem 0.5rem 1.5rem;
+  }
+
+  .board-toolbar {
+    transform: translate(-50%, -50%);
+  }
+
+  .tool-btn {
+    padding-inline: 1rem;
+  }
+
+  .sim-controls {
+    padding: 12px 12px;
+  }
+}
+
+/* ===== THEME VARIANTS (DARK / LIGHT) ===== */
+/* Asumsi toggle di homepage set data-theme="light"/"dark" di <html> atau <body> */
+
+html[data-theme="light"] .board-wrapper,
+body[data-theme="light"] .board-wrapper {
+  background: #e5e7ff;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+}
+
+html[data-theme="light"] #circuitBoard,
+body[data-theme="light"] #circuitBoard {
+  background: #e0e7ff;
+}
+
+html[data-theme="light"] .sim-subtitle,
+body[data-theme="light"] .sim-subtitle {
+  color: #111827;
+}
+
+html[data-theme="light"] .sim-note,
+body[data-theme="light"] .sim-note {
+  color: #4b5563;
+}
+
+html[data-theme="light"] .board-hint,
+body[data-theme="light"] .board-hint {
+  color: #4b5563;
+}
+
+html[data-theme="light"] .sim-controls,
+body[data-theme="light"] .sim-controls {
+  background: #f9fafb;
+  color: #111827;
+}
+
+html[data-theme="light"] .sim-label,
+body[data-theme="light"] .sim-label {
+  color: #111827;
+}
+
+html[data-theme="light"] .sim-info-row,
+body[data-theme="light"] .sim-info-row {
+  color: #1f2937;
+}
+
+html[data-theme="light"] .sim-reset-btn,
+body[data-theme="light"] .sim-reset-btn {
+  background: #f9fafb;
+  color: #111827;
+  border-color: rgba(148, 163, 184, 0.8);
+}
+
+html[data-theme="light"] .sim-reset-btn:hover,
+body[data-theme="light"] .sim-reset-btn:hover {
+  background: #e0f2fe;
 }

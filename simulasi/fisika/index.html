@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>SimLab.id - Simulasi Fisika</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS utama -->
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/navbar.css" />
+  <link rel="stylesheet" href="../../assets/css/sim-list.css" />
+  <link rel="stylesheet" href="../../assets/css/fisika.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+</head>
+<body class="simlab-body" data-theme="dark">
+  <!-- NAVBAR (sama seperti halaman lain) -->
+ <!-- NAVBAR -->
+ <header class="slb-navbar">
+  <div class="slb-nav-inner">
+
+    <!-- LOGO -->
+    <a href="index.html" class="slb-logo">
+<img src="../../assets/img/logo-simlab.png" class="slb-logo-img"> 
+      <span>SimLab<span class="dot">.id</span></span>
+    </a>
+
+    <!-- MENU -->
+  <nav class="slb-nav-links">
+  <a href="../../index.html" data-nav="beranda">Beranda</a>
+  <a href="../../index.html#tema" data-nav="simulasi">Simulasi</a>
+  <a href="../../about.html" data-nav="tentang">Tentang</a>
+  <a href="../../index.html#guru" data-nav="guru">Untuk Guru</a>
+  <a href="../../sains-quran.html" data-nav="quran" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
+</nav>
+    <!-- RIGHT -->
+    <div class="slb-nav-right">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <a href="auth/register.html" class="slb-btn slb-btn-primary">
+        Daftar
+      </a>
+
+      <a href="auth/login.html" class="slb-btn slb-btn-outline">
+        Masuk
+      </a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <!-- HERO TEMA FISIKA -->
+    <section class="section fisika-hero">
+      <div class="section-inner fisika-hero-inner">
+        <!-- Text kiri -->
+        <div class="fisika-hero-text">
+          <a href="../../index.html#tema" class="back-link">← Kembali ke Tema Simulasi</a>
+
+          <p class="hero-kicker">Tema Simulasi • Fisika</p>
+          <h1>
+            Simulasi Fisika yang<br />
+            mudah dipahami di kelas.
+          </h1>
+          <p class="hero-subtitle">
+            Tema Fisika di SimLab.id fokus ke konsep dasar seperti gerak lurus dan rangkaian listrik,
+            supaya guru bisa menjelaskan inti materi tanpa harus penuh rumus di awal.
+          </p>
+
+          <ul class="fisika-points">
+            <li>Fokus ke konsep inti, bukan hafalan rumus.</li>
+            <li>Visual interaktif yang bisa dihentikan, diulang, dan dieksplorasi.</li>
+            <li>Cocok untuk SMP–SMA sebagai pengantar sebelum praktikum.</li>
+          </ul>
+        </div>
+
+        <!-- Visual kanan -->
+        <div class="fisika-hero-visual">
+          <div class="fisika-hero-card">
+            <img
+              src="../../assets/img/tema-fisika.png"
+              alt="Ilustrasi tema simulasi Fisika"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIST SIMULASI DI TEMA FISIKA -->
+    <section class="section fisika-sim-list">
+      <div class="section-inner">
+        <header class="section-header">
+          <h2>Pilih Simulasi Fisika</h2>
+          <p>
+            Berikut beberapa simulasi yang termasuk dalam tema Fisika.
+            Sebagian sudah dapat digunakan, dan sebagian lain masih dalam tahap pengembangan.
+          </p>
+        </header>
+
+        <div class="sub-sim-grid">
+          <!-- 1. Rangkaian Listrik Sederhana -->
+          <article class="sub-sim-card sub-sim-live">
+            <div class="sub-sim-tag">Tersedia</div>
+            <h3>Rangkaian Listrik Sederhana</h3>
+            <p>
+              Susun lampu, saklar, sumber, dan resistor di papan simulasi lalu lihat bagaimana
+              arus dan tegangan memengaruhi nyala lampu.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Mengenal komponen dasar: lampu, baterai, saklar, resistor.</li>
+              <li>Visual arus listrik di kabel dan perubahan terang lampu.</li>
+              <li>Cocok untuk pengantar rangkaian seri &amp; paralel.</li>
+            </ul>
+            <a
+              href="../listrik/index.html"
+              class="slb-btn slb-btn-primary sub-sim-btn"
+            >
+              ⚡ Buka Simulasi Listrik
+            </a>
+          </article>
+
+          <!-- 2. Gerak Lurus (GLB & GLBB) -->
+          <article class="sub-sim-card sub-sim-live">
+            <div class="sub-sim-tag">Tersedia</div>
+            <h3>Gerak Lurus (GLB &amp; GLBB)</h3>
+            <p>
+              Amati gerak objek di lintasan, ubah kecepatan &amp; percepatan, lalu lihat
+              bagaimana posisi berubah terhadap waktu.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Memahami hubungan jarak, waktu, kecepatan, dan percepatan.</li>
+              <li>Mode GLB dan GLBB dalam satu tampilan sederhana.</li>
+              <li>Cocok sebagai pengantar grafik s–t dan v–t.</li>
+            </ul>
+            <a
+              href="../glb/index.html"
+              class="slb-btn slb-btn-primary sub-sim-btn"
+            >
+              🚗 Buka Simulasi Gerak Lurus
+            </a>
+          </article>
+
+          <!-- 3. Getaran & Gelombang -->
+          <article class="sub-sim-card sub-sim-soon">
+            <div class="sub-sim-tag">Dalam pengembangan</div>
+            <h3>Getaran &amp; Gelombang</h3>
+            <p>
+              Simulasi untuk melihat bagaimana benda bergetar dan gelombang merambat
+              pada tali atau pegas.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Menjelaskan amplitudo, frekuensi, dan periode secara visual.</li>
+              <li>Cocok untuk diskusi awal tentang bunyi dan gelombang mekanik.</li>
+            </ul>
+            <div class="sub-sim-coming">Segera hadir setelah versi lomba.</div>
+          </article>
+
+          <!-- 4. Hukum Newton & Gaya -->
+          <article class="sub-sim-card sub-sim-soon">
+            <div class="sub-sim-tag">Rencana</div>
+            <h3>Hukum Newton &amp; Gaya</h3>
+            <p>
+              Visualisasi gaya dorong–tarik dan gerak benda di lintasan licin maupun kasar,
+              untuk memahami resultan gaya.
+            </p>
+            <ul class="sub-sim-bullets">
+              <li>Menjelaskan hubungan gaya, massa, dan percepatan.</li>
+              <li>Bisa dipakai saat membahas gaya gesek dan gaya normal.</li>
+            </ul>
+            <div class="sub-sim-coming">Dirancang untuk versi lanjutan SimLab.id.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="slb-footer">
+    <div class="slb-footer-inner">
+      <span>© 2025 SimLab.id • Tema Fisika</span>
+      <span class="slb-footer-mini">
+        Fokus: sekolah menengah • Versi lomba nasional
+      </span>
+    </div>
+  </footer>
+
+  <!-- JS NAVBAR & TEMA -->
+  <script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -11,42 +11,40 @@
 </head>
 <body class="simlab-body" data-theme="dark">
   <!-- NAVBAR -->
-  <header class="slb-navbar">
-    <div class="slb-nav-inner">
-      <a href="../../index.html" class="slb-logo">
-        <div class="slb-logo-mark">SL</div>
-        <div class="slb-logo-text">SimLab<span>.id</span></div>
+<!-- NAVBAR -->
+ <header class="slb-navbar">
+  <div class="slb-nav-inner">
+
+    <!-- LOGO -->
+    <a href="index.html" class="slb-logo">
+<img src="../../assets/img/logo-simlab.png" class="slb-logo-img"> 
+      <span>SimLab<span class="dot">.id</span></span>
+    </a>
+
+    <!-- MENU -->
+  <nav class="slb-nav-links">
+  <a href="../../index.html" data-nav="beranda">Beranda</a>
+  <a href="../../index.html#tema" data-nav="simulasi">Simulasi</a>
+  <a href="../../about.html" data-nav="tentang">Tentang</a>
+  <a href="../../index.html#guru" data-nav="guru">Untuk Guru</a>
+  <a href="../../sains-quran.html" data-nav="quran" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
+</nav>
+
+
+    <!-- RIGHT -->
+    <div class="slb-nav-right">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <a href="auth/register.html" class="slb-btn slb-btn-primary">
+        Daftar
       </a>
 
-      <nav class="slb-nav-links">
-        <a href="../../index.html">Beranda</a>
-        <a href="../../index.html#tema" class="active">Simulasi</a>
-        <a href="../../about.html">Tentang</a>
-        <a href="../../index.html#guru">Untuk Guru</a>
-        <a href="../../sains-quran.html" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
-      </nav>
-
-      <div class="slb-nav-right">
-        <button
-          class="theme-toggle"
-          id="themeToggle"
-          type="button"
-          aria-label="Ganti tema terang/gelap"
-        >
-          🌙
-        </button>
-
-        <span class="slb-nav-badge">Beta</span>
-        <a href="../../auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
-          Masuk
-        </a>
-      </div>
-
-      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
-        ☰
-      </button>
+      <a href="auth/login.html" class="slb-btn slb-btn-outline">
+        Masuk
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
   <main>
     <!-- HERO TEMA KEBUMIAN -->

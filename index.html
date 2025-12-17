@@ -10,53 +10,82 @@
   <link rel="stylesheet" href="assets/css/navbar.css" />
 </head>
 <body class="simlab-body">
+ <!-- ============ LOADING OVERLAY (HOME ONLY) ============ -->
+<div id="slbLoader" class="slb-loader" aria-hidden="true">
+  <div class="slb-loader-inner">
+    <div class="slb-loader-mark" aria-hidden="true">
+      <!-- Beaker -->
+      <div class="beaker">
+        <div class="beaker-liquid"></div>
+        <div class="beaker-bubbles">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Orbit atom -->
+      <div class="atom" aria-hidden="true">
+        <div class="atom-core"></div>
+        <div class="atom-orbit o1"></div>
+        <div class="atom-orbit o2"></div>
+        <div class="atom-orbit o3"></div>
+      </div>
+    </div>
+
+    <div class="slb-loader-text">
+      <div class="slb-loader-title">SimLab.id</div>
+      <div class="slb-loader-sub">Menyiapkan simulasi…</div>
+
+      <!-- progress bar -->
+      <div class="slb-progress">
+        <div class="slb-progress-fill"></div>
+        <div class="slb-progress-shine"></div>
+      </div>
+
+      <div class="slb-loader-tip">Tip: kamu bisa ganti tema 🌙 / ☀️ di kanan atas</div>
+    </div>
+  </div>
+</div>
+
+
 
   <!-- NAVBAR -->
     <!-- NAVBAR -->
      <body class="simlab-body">
   <header class="slb-navbar">
-    
-    <div class="slb-nav-inner">
-      <a href="index.html" class="slb-logo">
-        <div class="slb-logo-mark">SL</div>
-        <div class="slb-logo-text">
-          SimLab<span>.id</span>
-        </div>
+  <div class="slb-nav-inner">
+
+    <!-- LOGO -->
+    <a href="index.html" class="slb-logo">
+      <img src="assets/img/logo-simlab.png" alt="SimLab.id" />
+      <span>SimLab<span class="dot">.id</span></span>
+    </a>
+
+    <!-- MENU -->
+   <nav class="slb-nav-links">
+  <a href="index.html" data-nav="beranda">Beranda</a>
+  <a href="#tema" data-nav="simulasi">Simulasi</a>
+  <a href="about.html" data-nav="tentang">Tentang</a>
+  <a href="#guru" data-nav="guru">Untuk Guru</a>
+  <a href="sains-quran.html" data-nav="quran" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
+</nav>
+
+
+    <!-- RIGHT -->
+    <div class="slb-nav-right">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <a href="auth/register.html" class="slb-btn slb-btn-primary">
+        Daftar
       </a>
 
-      <nav class="slb-nav-links">
-        <a href="index.html" class="active">Beranda</a>
-        <a href="#simulasi-populer">Simulasi</a>
-        <a href="about.html">Tentang</a>
-        <a href="#guru">Untuk Guru</a>
-        <a href="sains-quran.html">Sains dalam Al-Qur’an</a>
-      </nav>
-
-      <div class="slb-nav-right">
-        <!-- tombol tema -->
-        <button
-          class="theme-toggle"
-          id="themeToggle"
-          type="button"
-          aria-label="Ganti tema terang/gelap"
-        >
-          🌙
-        </button>
-
-        <span class="slb-nav-badge">Beta</span>
-        <a href="auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
-          Masuk
-        </a>
-      </div>
-
-      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">
-        ☰
-      </button>
+      <a href="auth/login.html" class="slb-btn slb-btn-outline">
+        Masuk
+      </a>
     </div>
-  </header>
+  </div>
+</header>
+
   <main class="page-fade">
-
-
   <!-- HERO (background gambar, bukan img kotak) -->
   <main>
     <section class="hero hero-bg">
@@ -87,7 +116,6 @@
             <span class="slb-pill">SMA</span>
             <span class="slb-pill">IPA • Fisika • Kebumian</span>
           </div>
-
           <p class="hero-caption">
             Visual Tata Surya versi SimLab.id — simulasi interaktifnya bisa kamu coba di bawah. 😉
           </p>
@@ -172,9 +200,6 @@
 
       </div>
     </section>
-
-    
-
         <!-- =========================
          TEMA SIMULASI (ALA PHET)
     ========================== -->
@@ -242,7 +267,6 @@
         </div>
       </div>
     </section>
-
     <!-- =========================
          SIMULASI POPULER (sudah ada)
     ========================== -->
@@ -350,9 +374,7 @@
           </div>
         </div>
       </div>
-
     </div><!-- /guru-layout -->
-
     <!-- Kartu ringkas fitur guru di bagian bawah -->
     <div class="guru-card-grid reveal-on-scroll" style="transition-delay: .2s;">
       <div class="guru-card">
@@ -381,8 +403,6 @@
   </div>
 </section>
 
-
-
     <!-- SECTION: FOOTER CTA -->
     <section class="section section-dark-alt">
       <div class="section-inner footer-cta">
@@ -406,8 +426,6 @@
   </main>
   </main>
   </body>
-
-
   <!-- FOOTER -->
   <footer class="slb-footer">
     <div class="slb-footer-inner">
@@ -420,5 +438,4 @@
   
   <!-- JS kecil untuk navbar mobile -->
   <script src="assets/js/main.js" defer></script>
-</body>
 </html>

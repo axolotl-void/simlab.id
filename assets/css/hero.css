@@ -30,3 +30,74 @@
 .hero-left {
   flex: 1.2;
 }
+/* ===== LOADING SCREEN ===== */
+#slb-loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #020617, #020617 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 0.8s ease forwards;
+  animation-delay: 3s;
+}
+
+.loader-inner {
+  text-align: center;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+}
+
+.loader-inner p {
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* LAB ICON */
+.lab {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.tube,
+.flask {
+  width: 16px;
+  height: 50px;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(
+    to top,
+    #38bdf8 40%,
+    rgba(56,189,248,0.15) 40%
+  );
+  animation: liquid 1.2s ease-in-out infinite;
+}
+
+.flask {
+  width: 28px;
+  height: 40px;
+  border-radius: 0 0 14px 14px;
+  animation-delay: 0.3s;
+}
+
+.tube:last-child {
+  animation-delay: 0.6s;
+}
+
+/* ANIMATIONS */
+@keyframes liquid {
+  0%, 100% {
+    background-position: bottom;
+  }
+  50% {
+    background-position: top;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

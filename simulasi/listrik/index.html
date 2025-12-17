@@ -14,29 +14,37 @@
 
   <!-- NAVBAR -->
   <header class="slb-navbar">
-    <div class="slb-nav-inner">
-      <a href="../../index.html" class="slb-logo">
-        <div class="slb-logo-mark">SL</div>
-        <div class="slb-logo-text">SimLab<span>.id</span></div>
+  <div class="slb-nav-inner">
+
+    <!-- LOGO -->
+    <a href="index.html" class="slb-logo">
+<img src="../../assets/img/logo-simlab.png" class="slb-logo-img"> 
+      <span>SimLab<span class="dot">.id</span></span>
+    </a>
+
+    <!-- MENU -->
+    <nav class="slb-nav-links">
+  <a href="../../index.html" data-nav="beranda">Beranda</a>
+  <a href="../../index.html#tema" data-nav="simulasi">Simulasi</a>
+  <a href="../../about.html" data-nav="tentang">Tentang</a>
+  <a href="../../index.html#guru" data-nav="guru">Untuk Guru</a>
+  <a href="../../sains-quran.html" data-nav="quran" class="slb-nav-highlight">Sains dalam Al-Qur’an</a>
+</nav>
+
+    <!-- RIGHT -->
+    <div class="slb-nav-right">
+      <button id="themeToggle" class="theme-toggle">🌙</button>
+
+      <a href="auth/register.html" class="slb-btn slb-btn-primary">
+        Daftar
       </a>
 
-      <nav class="slb-nav-links">
-        <a href="../../index.html">Beranda</a>
-        <a href="../../index.html#simulasi-populer" class="active">Simulasi</a>
-        <a href="../../about.html">Tentang</a>
-        <a href="../../index.html#guru">Untuk Guru</a>
-      </nav>
-
-      <div class="slb-nav-right">
-        <span class="slb-nav-badge">Beta</span>
-        <a href="../../auth/login.html" class="slb-btn slb-btn-outline slb-btn-sm">
-          Masuk
-        </a>
-      </div>
-
-      <button class="slb-nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      <a href="auth/login.html" class="slb-btn slb-btn-outline">
+        Masuk
+      </a>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="sim-main">
     <!-- HEADER SIMULASI -->
@@ -45,12 +53,12 @@
         <p class="sim-kicker">Simulasi Interaktif • Fisika (Listrik)</p>
         <h1>Rangkaian Listrik Sederhana</h1>
         <p class="sim-subtitle">
-          Pilih komponen dari panel atas (lampu, kabel, baterai, saklar, resistor),
+          Pilih komponen dari panel atas (lampu, kabel, sumber AC, saklar, resistor),
           lalu susun rangkaian di papan simulasi seperti di laboratorium.
         </p>
         <p class="sim-note">
-          Versi ini berfokus pada visual &amp; susunan rangkaian.
-          Logika arus &amp; kecerahan lampu dapat ditambahkan pada tahap berikutnya.
+          Versi ini memvisualisasikan arus &amp; nyala lampu secara sederhana,
+          agar konsep rangkaian seri mudah dipahami di kelas.
         </p>
       </div>
     </section>
@@ -60,22 +68,40 @@
       <div class="board-wrapper">
         <!-- Toolbar / panel komponen -->
         <div class="board-toolbar">
+          <!-- di dalam .board-toolbar -->
+<button class="tool-btn" data-type="delete">
+  🗑
+  <span class="tool-label">Hapus</span>
+</button>
+
           <button class="tool-btn" data-type="lamp">
-            <img src="../../assets/img/icont/lampu.png" alt="Lampu" />
+            💡
+            <span class="tool-label">Lampu</span>
           </button>
+
           <button class="tool-btn" data-type="wire">
-            <img src="../../assets/img/icont/kabel.png" alt="Kabel" />
+            🔌
+            <span class="tool-label">Kabel</span>
           </button>
+
           <button class="tool-btn" data-type="battery">
-            <img src="../../assets/img/icont/batrai.png" alt="Baterai" />
+            🪫
+            <span class="tool-label">Sumber</span>
           </button>
+
           <button class="tool-btn" data-type="switch">
-            <img src="../../assets/img/icont/saklar.png" alt="Saklar" />
+            ⏻
+            <span class="tool-label">Saklar</span>
           </button>
+
           <button class="tool-btn" data-type="resistor">
-            <img src="../../assets/img/icont/resistor.png" alt="Resistor" />
+            🌀
+            <span class="tool-label">Resistor</span>
           </button>
         </div>
+        <button id="resetSimBtn" class="sim-reset-btn">
+    Reset papan
+  </button>
 
         <!-- Area papan simulasi -->
         <canvas
@@ -86,10 +112,38 @@
           Browser Anda tidak mendukung elemen canvas.
         </canvas>
       </div>
+            <!-- PANEL KONTROL & INFO -->
+      <section class="sim-controls">
+        <div class="sim-controls-row">
+          <label for="voltageSlider" class="sim-label">
+            Tegangan sumber (V)
+          </label>
+          <input
+            type="range"
+            id="voltageSlider"
+            min="1"
+            max="20"
+            step="0.5"
+            value="6"
+          />
+          <span id="voltageValue" class="sim-value">6 V AC</span>
+        </div>
+
+        <div class="sim-info-row">
+          <p id="simInfoMain" class="sim-info-main">
+            Tegangan rendah → semua lampu aman. Coba naikkan pelan-pelan untuk melihat pengaruhnya.
+          </p>
+          <p id="simInfoDetail" class="sim-info-detail">
+            Lampu hidup: 0 • Lampu terbakar: 0 • Arus maksimum: 0.00 A
+          </p>
+        </div>
+      </section>
+
 
       <p class="board-hint">
         Klik salah satu ikon komponen di panel atas untuk menambahkannya ke papan.
         Komponen di papan dapat digeser dengan drag &amp; drop.
+        Saklar dapat diklik untuk mengubah posisi ON / OFF.
       </p>
     </section>
   </main>

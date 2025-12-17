@@ -139,3 +139,120 @@
   }
 }
 
+.slb-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.slb-logo-img {
+  height: 34px;      /* ⬅️ ukuran aman (tidak kegedean) */
+  width: auto;
+  display: block;
+}
+
+.slb-logo-text {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #e5e7eb;
+}
+
+.slb-logo-text span {
+  color: #38bdf8;
+}
+
+/* NAVBAR BASE */
+.slb-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.slb-nav-inner {
+  max-width: 1280px;
+  height: 78px;
+  margin: auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.slb-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.slb-logo img {
+  width: 34px;
+  height: 34px;
+}
+
+.slb-logo .dot {
+  color: #38bdf8;
+}
+
+/* MENU */
+.slb-nav-links {
+  position: relative;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.slb-nav-links a {
+  position: relative;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  border-radius: 999px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.slb-nav-links a:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ACTIVE INDICATOR (SLIDING PILL) */
+.nav-indicator {
+  position: absolute;
+  top: 4px;
+  height: 36px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.25),
+    rgba(14, 165, 233, 0.15)
+  );
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.35);
+  transition: all 0.35s cubic-bezier(.4,0,.2,1);
+  z-index: -1;
+}
+
+/* RIGHT */
+.slb-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.theme-toggle{
+  position: relative;
+  z-index: 200;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.slb-navbar{
+  position: sticky;
+  z-index: 300;
+}
+.slb-loader.is-hiding{
+  pointer-events: none;
+}
